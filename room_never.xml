@@ -16,7 +16,7 @@
 	<scroll minspeed="200" maxspeed="250" thresholdX="200"/>
 
 	<Assets>
-		<Asset file="backdrop.jpg" scale="1.0" name="back" layer="1" coords="screen" x="-1200" y="0" />
+		<Asset file="backdrop_oct.jpg" scale="1.0" name="back" layer="1" coords="screen" x="-1200" y="0" />
   		<Asset file="mask_foreground.swf" name="fore" layer="51" x="-1200" y="0" blendmode="erase" />
  	 	<Asset file="cage_front.png" scale="1.0" name="cage_front" layer="50" coords="screen" x="-1047" y="203" depth="2000"/>
 
