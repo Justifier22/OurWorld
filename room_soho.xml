@@ -27,7 +27,7 @@
   <!--<Asset file="soho_bento.jpg" scale="1.0" name="back" layer="1" coords="screen" x="-2000" y="0"/>-->
 
 	<!--commented out during bento-->
-  <Asset file="backdrop.jpg" scale="1.0" name="back" layer="1" coords="screen" x="-2000" y="0"/>
+  <Asset file="backdrop_oct.jpg" scale="1.0" name="back" layer="1" coords="screen" x="-2000" y="0"/>
 
   <!-- masks -->
   <Asset file="mask_fountain.swf" scale="1.0" name="mask_fountain" layer="50" coords="screen" x="116" y="266" depth="2600" blendmode="erase"/>
