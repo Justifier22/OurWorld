@@ -17,7 +17,7 @@
 		<!--use for BENTO-->
 	<!--<Asset file="beat_bento.jpg" name="back" layer="0" x="-1278" y="0" />-->
 		<!--comment out for BENTO-->
-	<Asset file="backdrop.jpg" name="back" layer="0" x="-1278" y="0" />
+	<Asset file="backdrop_oct.jpg" name="back" layer="0" x="-1278" y="0" />
 
   	<Asset file="mask_foreground.swf" name="fore" layer="51" x="953" y="420" depth="0"  blendmode="erase" />
 
