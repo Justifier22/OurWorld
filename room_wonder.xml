@@ -40,12 +40,12 @@
 
 	<Assets>
 		<!--reinstate after october halloween-->
-		 <Asset file="wonderland_backdrop_01.jpg" name="back-lower" layer="1" coords="screen" x="-2000" y="0" />
-		<Asset file="wonderland_backdrop_02.jpg" name="back-upper" layer="2" coords="screen" x="-1535" y="-1316" /> 
+		<!-- <Asset file="wonderland_backdrop_01.jpg" name="back-lower" layer="1" coords="screen" x="-2000" y="0" /> -->
+		<!--<Asset file="wonderland_backdrop_02.jpg" name="back-upper" layer="2" coords="screen" x="-1535" y="-1316" /> -->
 
 		<!--activate during october halloween-->
-		<!--<Asset file="wonderland_backdrop_01_oct.jpg" name="back-lower" layer="1" coords="screen" x="-2000" y="0" />
-		<Asset file="wonderland_backdrop_02_oct.jpg" name="back-upper" layer="2" coords="screen" x="-1535" y="-1316" />-->
+		<Asset file="wonderland_backdrop_01_oct.jpg" name="back-lower" layer="1" coords="screen" x="-2000" y="0" />
+		<Asset file="wonderland_backdrop_02_oct.jpg" name="back-upper" layer="2" coords="screen" x="-1535" y="-1316" />
 
 		<!-- foreground elements -->
 		<Asset file="bridge_foreground.png" name="bridge_fore" layer="99" coords="screen" x="529" y="131" />
