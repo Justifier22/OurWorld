@@ -42,9 +42,9 @@
 		<!--for use with BENTO-->
 		<!--<Asset file="rnr_bento.jpg" scale="1.0" name="back" layer="1" coords="screen" x="-2000" y="0" />-->
 		<!-- for use with halloween -->
-		<!--<Asset file="backdrop_oct.jpg" scale="1.0" name="back" layer="1" coords="screen" x="-2000" y="0" />-->
+		<Asset file="backdrop_oct.jpg" scale="1.0" name="back" layer="1" coords="screen" x="-2000" y="0" />
 		<!--commented out for BENTO and halloween-->
-		 <Asset file="backdrop.jpg" scale="1.0" name="back" layer="1" coords="screen" x="-2000" y="0" /> 
+		 <!--<Asset file="backdrop.jpg" scale="1.0" name="back" layer="1" coords="screen" x="-2000" y="0" /> -->
 		<Asset file="rnr_midground_01.png" scale="1.0" name="mid" layer="50" coords="screen" x="-47" y="107" depth="2800" required="false"/>
 		<Asset file="rnr_midground_02.png" scale="1.0" name="mid2" layer="50" coords="screen" x="1176" y="157" depth="3000" required="false"/>
 		<Asset file="rnr_foreground_01.png" scale="1.0" name="fore" layer="90" coords="screen" x="-2000" y="0" />
