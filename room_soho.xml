@@ -59,8 +59,8 @@
 
   <Asset file="/i/world/shared/bin/store_select.swf" scale="0.8" name="store_ui" type="app" layer="51" coords="screen" x="-150" y="250" visible="false"/>
  <!--HALLOWEEN COMMENTING OUT door and salon sign-->
-   <Asset file="salon_door.swf" scale="1" name="salon_door" layer="40" x="-1170" y="146" depth="3000" required="false" />
-  <Asset file="soho_salon_02.swf" name="salon_sign" layer="40" x="-1100" y="9" required="false"  />	 
+    <!--<Asset file="salon_door.swf" scale="1" name="salon_door" layer="40" x="-1170" y="146" depth="3000" required="false" />-->
+   <!--<Asset file="soho_salon_02.swf" name="salon_sign" layer="40" x="-1100" y="9" required="false"  />	 -->
 
   <Asset file="soho.swf" scale="1" name="soho" type="app" layer="0" x="0" y="0" />
 
@@ -473,10 +473,10 @@
 		</Action>
 
 		<!-- commenting out when its halloween since the sign will be missing-->
-		 <Action name="salon_sign" target="salon_door" trigger="over"  >
+		<!--  <Action name="salon_sign" target="salon_door" trigger="over"  >
   			<step action="playOnceForward" target="salon_sign" />
 			<step action="stop" target="salon_sign" delay="3000" />
-  		</Action> 
+  		</Action> --->
 
 
 		<Action name="beat_street" target="beat_street" trigger="click" >
