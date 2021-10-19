@@ -27,11 +27,11 @@
 
 <Assets>
   <!--Commented out for bento, first line for backdrop2 commented out for OCT Halloween-->
-  <Asset file="backdrop2.jpg" scale="1.0" name="back" layer="1" coords="screen" x="-2000" y="0"/>
+  <!--<Asset file="backdrop2.jpg" scale="1.0" name="back" layer="1" coords="screen" x="-2000" y="0"/>
   <Asset file="mask_fore_left.swf" scale="1.0" name="mask_fore_left" layer="99" blendmode="erase" coords="screen" x="-1417" y="399" depth="0"/>
   <Asset file="mask_fore_right.swf" scale="1.0" name="mask_fore_right" layer="99" blendmode="erase" coords="screen" x="560" y="399" depth="0"/>
   <!--Halloween OCT-->
-	<!--<Asset file="backdrop2_oct.jpg" scale="1.0" name="back" layer="1" coords="screen" x="-2000" y="0"/>-->
+	<Asset file="backdrop2_oct.jpg" scale="1.0" name="back" layer="1" coords="screen" x="-2000" y="0"/>
 
   <!--BENTO BOX PROMO-->
 	<!--<Asset file="pier_bento.jpg" scale="1.0" name="back" layer="0" coords="screen" x="-2000" y="0" />
@@ -114,7 +114,7 @@
 			<Vertex x="-480" y="355" />
 		</Shape>
 
-		<!--
+
 		<Shape name="chair1" coords="screen" fill="none" color1="0x00ff00" layer="20" cursor="chair">
 			<Vertex x="-900" y="310" />
 			<Vertex x="-840" y="310" />
@@ -127,7 +127,7 @@
 			<Vertex x="-780" y="360" />
 			<Vertex x="-840" y="360" />
 		</Shape>
-			-->
+
 
 		<Shape name="chair3" coords="screen" fill="none" color1="0x00ff00" layer="20" cursor="chair">
 			<Vertex x="-700" y="310" />
@@ -155,12 +155,12 @@
 			<Vertex x="330" y="345" />
 		</Shape>
 
-		<!--<Shape name="popcap" coords="screen" fill="none" color1="0x00ff00" layer="20" cursor="controller">
+		<Shape name="popcap" coords="screen" fill="none" color1="0x00ff00" layer="20" cursor="controller">
 			<Vertex x="1170" y="230" />
 			<Vertex x="1225" y="230" />
 			<Vertex x="1225" y="365" />
 			<Vertex x="1170" y="365" />
-		</Shape>-->
+		</Shape>
 
 		<Shape name="poker" coords="screen" fill="none" color1="0x00ff00" layer="20" cursor="door">
 			<Vertex x="400" y="240" />
@@ -176,12 +176,12 @@
 			<Vertex x="-870" y="370" />
 		</Shape>
 
-		<!--<Shape name="race" coords="screen" fill="none" color1="0x00ff00" layer="20" cursor="door">
+		<Shape name="race" coords="screen" fill="none" color1="0x00ff00" layer="20" cursor="door">
 			<Vertex x="-44" y="120" />
 			<Vertex x="140"  y="120" />
 			<Vertex x="140" y="320" />
 			<Vertex x="-44" y="320" />
-		</Shape>-->
+		</Shape>
 
 	</Shapes>
 
@@ -380,14 +380,14 @@
 			<step action="slot" target="5" />
 		</Action>
 
-		<!--<Action name="popcap" target="popcap" trigger="click" exclude_static="true">
+		<Action name="popcap" target="popcap" trigger="click" exclude_static="true">
 			<step action="link" target="game" />
-		</Action>-->
+		</Action>
 
-		<!--<Action name="eyes_anim" target="popcap" trigger="over" >
+		-<Action name="eyes_anim" target="popcap" trigger="over" >
 			<step action="playOnceForward" target="eyes" />
 			<step action="playOnceForward" target="bottle" delay="2000"/>
-		</Action>-->
+		</Action>
 
 
 		<Action name="shuttle_anim" target="ship_door" trigger="over" >
@@ -423,22 +423,22 @@
 			<step action="stop" target="pokercabana" delay="1600" />
 		</Action>
 
-		<!--<Action name="pop_game_anim" target="pop_game" trigger="periodic" interval="10000" >
+		<Action name="pop_game_anim" target="pop_game" trigger="periodic" interval="10000" >
 			<step action="playOnceForward" target="pop_game,1" delay="0" />
-		</Action>-->
+		</Action>
 
-		<!--<Action name="derby_sign_anim" target="derby_sign" trigger="periodic" interval="10000" >
+		<Action name="derby_sign_anim" target="derby_sign" trigger="periodic" interval="10000" >
 			<step action="playOnceForward" target="derby_sign,1" delay="0" />
-		</Action>-->
+		</Action>
 
 		<Action name="splatter_sign" target="" trigger="periodic" interval="6000" >
 			<step action="playOnceForward" target="splatter_sign" delay="0" />
 		</Action>
 
-		<!--<Action name="race" target="race" trigger="click"  exclude_static="true">
+		<Action name="race" target="race" trigger="click"  exclude_static="true">
 				<step action="walkto" target="-1600,1800,0" delay="0" />
 				<step action="gotoRoom" target="districts/pier/the_races" delay="1000" />
-		</Action>-->
+		</Action>
 
 	</Actions>
 
