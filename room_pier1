@@ -1,0 +1,476 @@
+<Room name="pier">
+
+<Person x="0" y="1500" z="0" width="800" height="200" from="default"/>
+<Person x="5200" y="1300" width="800" height="200" from="arcadia-boardwalk-exterior" />
+<Person x="2000" y="1500" z="0" width="800" height="200" from="snaps"/>
+<Person x="-3600" y="2300" z="0" width="400" height="200" from="districts/vegas/exterior"/>
+<Person x="-3600" y="2300" z="0" width="400" height="200" from="districts/soho/exterior"/>
+<Person x="-6200" y="1300" z="0" width="400" height="200" from="skyscope"/>
+<Person x="-5000" y="1500" z="0" width="400" height="200" from="splatterbox"/>
+<Person x="4500" y="1500" z="0" width="400" height="200" from="npc96011" /> <!-- doug-bot -->
+<Person x="-200" y="1500" z="0" width="400" height="200" from="npc96010" /> <!-- azia -->
+<Person x="-1700" y="1700" z="0" width="400" height="200" from="districts/pier/the_races" />
+
+
+<Walk speed="9000" framerate="40" />
+
+<Camera x="-1500" y="-4150" z="3280" focalX="495" focalY="-360" focalLength="1430" />
+
+
+<scroll minspeed="100" maxspeed="250" thresholdX="200">
+	<scrollrange min="-700" max="2000" leftThresholdX="200" rightThresholdX="200"/>
+	<scrollrange min="-850" max="-700" leftThresholdX="400" rightThresholdX="200"/>
+	<scrollrange min="-1000" max="-850" leftThresholdX="550" rightThresholdX="200"/>
+	<scrollrange min="-2000" max="-1000" leftThresholdX="700" rightThresholdX="200"/>
+</scroll>
+
+
+<Assets>
+  <!--Commented out for bento, first line for backdrop2 commented out for OCT Halloween-->
+  <Asset file="backdrop2.jpg" scale="1.0" name="back" layer="1" coords="screen" x="-2000" y="0"/>
+  <Asset file="mask_fore_left.swf" scale="1.0" name="mask_fore_left" layer="99" blendmode="erase" coords="screen" x="-1417" y="399" depth="0"/>
+  <Asset file="mask_fore_right.swf" scale="1.0" name="mask_fore_right" layer="99" blendmode="erase" coords="screen" x="560" y="399" depth="0"/>
+  <!--Halloween OCT-->
+	<!--<Asset file="backdrop2_oct.jpg" scale="1.0" name="back" layer="1" coords="screen" x="-2000" y="0"/>-->
+
+  <!--BENTO BOX PROMO-->
+	<!--<Asset file="pier_bento.jpg" scale="1.0" name="back" layer="0" coords="screen" x="-2000" y="0" />
+	<Asset file="foreground.swf" scale="1.0" name="foreground" layer="99" coords="screen" x="-1161" y="400" blendmode="erase" depth="0"/>-->
+
+  <!-- doors -->
+  <!-- HIDE during BENTO to hide the apature door -->
+  <Asset file="snaps_door.swf" scale="1.0" name="snaps_door" layer="47" coords="screen" x="686" y="177" depth="2000" cursor="door" />
+
+  <!--SHOW during BENTO because some lines refer to snaps_door tag-->
+
+  <!--<Asset file="snaps_door_bento.swf" scale="1.0" name="snaps_door" layer="47" coords="screen" x="737" y="245" depth="2000" cursor="door" />-->
+
+  <Asset file="splatterbox_door.swf" scale="1.0" name="splatterbox_door" layer="50" coords="screen" x="-876" y="211" depth="2100" cursor="door" />
+
+  <!-- animations -->
+  <!--<Asset file="/i/world/shared/assets/gem_atm.swf" scale="0.8" name="gem_atm" layer="10" coords="screen" x="126" y="139" depth="2000" visible="false"  required="false"/>-->
+  <Asset file="scope_02.swf" name="scope" layer="10" x="-1522" y="290" required="false"/>
+  <!--commented out during sakura bento-->
+  <Asset file="snaps_01.swf" name="snaps_sign" layer="48" x="587" y="37" required="false" />
+  <Asset file="poker_cabana_02.swf" name="pokercabana" layer="11" x="128" y="7" required="false" />
+  <!--<Asset file="derby_sign.swf" name="derby_sign" layer="11" x="-360" y="0" required="false" />
+-->
+  <!--<Asset file="pop_game.swf" name="pop_game" layer="11" x="1161" y="215" required="false" />-->
+  <Asset file="splatterbox_02.swf" name="splatter_sign" layer="11" x="-1044" y="0" required="false" />
+
+
+  <!-- taxi and limo --> <!--Should we disable during bento? changing to blendmode="erase" during bento seemed to fix it-->
+
+  <Asset file="taxi_dock.swf" scale="1.0" name="taxi" layer="47" coords="screen" x="-1200" y="0"  visible="false"/>
+  <Asset file="limo_dock.swf" scale="1.0" name="limo" layer="47" coords="screen" x="-1200" y="0"  visible="false"/>
+  <Asset file="/i/world/shared/bin/taximenu.swf" name="taximenu" layer="ui" x="0" y="0" />
+
+</Assets>
+
+	<Shapes>
+		<Shape name="boardwalk arrow" coords="screen" fill="none" color1="0x00ff00" layer="6" cursor="door">
+			<Vertex x="1595" y="445" />
+			<Vertex x="1715" y="445" />
+			<Vertex x="1790" y="463" />
+			<Vertex x="1755" y="490" />
+			<Vertex x="1639" y="490" />
+		</Shape>
+		<Shape name="boardwalk arrow2" coords="screen" fill="none" color1="0x00ff00" layer="6" cursor="door">
+			<Vertex x="1880" y="100" />
+			<Vertex x="2000" y="100" />
+			<Vertex x="2000" y="550" />
+			<Vertex x="1880" y="550" />
+		</Shape>
+		<Shape name="skyscope" coords="screen" fill="none" color1="0x00ff00" layer="10" cursor="door">
+			<Vertex x="-1210" y="325" />
+			<Vertex x="-1080" y="325" />
+			<Vertex x="-1080" y="385" />
+			<Vertex x="-1210" y="385" />
+		</Shape>
+		<Shape name="snaps" coords="screen" fill="none" color1="0x00ff00" layer="9" cursor="door">
+			<Vertex x="715" y="240" />
+			<Vertex x="885" y="240" />
+			<Vertex x="885" y="375" />
+			<Vertex x="715" y="375" />
+		</Shape>
+		<!--<Shape name="atm" coords="screen" fill="none" color1="0x00ff00" layer="20" cursor="phone">
+			<Vertex x="175" y="240" />
+			<Vertex x="260" y="240" />
+			<Vertex x="260" y="370" />
+			<Vertex x="175" y="370" />
+		</Shape>-->
+
+		<Shape name="taxi_sign" coords="screen" fill="none" color1="0x00ff00" layer="20" cursor="door" >
+			<Vertex x="-320" y="275" />
+			<Vertex x="-220" y="275" />
+			<Vertex x="-220" y="330" />
+			<Vertex x="-320" y="330" />
+		</Shape>
+
+		<Shape name="taxi_pad" coords="screen" fill="none" color1="0x00ff00" layer="20" cursor="door" >
+			<Vertex x="-480" y="320" />
+			<Vertex x="-340" y="320" />
+			<Vertex x="-340" y="355" />
+			<Vertex x="-480" y="355" />
+		</Shape>
+
+		<!--
+		<Shape name="chair1" coords="screen" fill="none" color1="0x00ff00" layer="20" cursor="chair">
+			<Vertex x="-900" y="310" />
+			<Vertex x="-840" y="310" />
+			<Vertex x="-840" y="360" />
+			<Vertex x="-900" y="360" />
+		</Shape>
+		<Shape name="chair2" coords="screen" fill="none" color1="0x00ff00" layer="20" cursor="chair">
+			<Vertex x="-840" y="310" />
+			<Vertex x="-780" y="310" />
+			<Vertex x="-780" y="360" />
+			<Vertex x="-840" y="360" />
+		</Shape>
+			-->
+
+		<Shape name="chair3" coords="screen" fill="none" color1="0x00ff00" layer="20" cursor="chair">
+			<Vertex x="-700" y="310" />
+			<Vertex x="-645" y="310" />
+			<Vertex x="-645" y="360" />
+			<Vertex x="-700" y="360" />
+		</Shape>
+		<Shape name="chair4" coords="screen" fill="none" color1="0x00ff00" layer="20" cursor="chair">
+			<Vertex x="-645" y="310" />
+			<Vertex x="-585" y="310" />
+			<Vertex x="-585" y="360" />
+			<Vertex x="-645" y="360" />
+		</Shape>
+
+		<Shape name="chair5" coords="screen" fill="none" color1="0x00ff00" layer="20" cursor="chair">
+			<Vertex x="275" y="300" />
+			<Vertex x="330" y="300" />
+			<Vertex x="330" y="345" />
+			<Vertex x="275" y="345" />
+		</Shape>
+		<Shape name="chair6" coords="screen" fill="none" color1="0x00ff00" layer="20" cursor="chair">
+			<Vertex x="330" y="300" />
+			<Vertex x="395" y="300" />
+			<Vertex x="395" y="345" />
+			<Vertex x="330" y="345" />
+		</Shape>
+
+		<!--<Shape name="popcap" coords="screen" fill="none" color1="0x00ff00" layer="20" cursor="controller">
+			<Vertex x="1170" y="230" />
+			<Vertex x="1225" y="230" />
+			<Vertex x="1225" y="365" />
+			<Vertex x="1170" y="365" />
+		</Shape>-->
+
+		<Shape name="poker" coords="screen" fill="none" color1="0x00ff00" layer="20" cursor="door">
+			<Vertex x="400" y="240" />
+			<Vertex x="560" y="240" />
+			<Vertex x="560" y="370" />
+			<Vertex x="400" y="370" />
+		</Shape>
+
+		<Shape name="splatter" coords="screen" fill="none" color1="0x00ff00" layer="20" cursor="door">
+			<Vertex x="-870" y="300" />
+			<Vertex x="-770" y="300" />
+			<Vertex x="-770" y="370" />
+			<Vertex x="-870" y="370" />
+		</Shape>
+
+		<!--<Shape name="race" coords="screen" fill="none" color1="0x00ff00" layer="20" cursor="door">
+			<Vertex x="-44" y="120" />
+			<Vertex x="140"  y="120" />
+			<Vertex x="140" y="320" />
+			<Vertex x="-44" y="320" />
+		</Shape>-->
+
+	</Shapes>
+
+
+<Layout gridsquare="180">
+    <Perimeter coords="world">
+      <Vertex x="-6600" y="2640" z="0"/>
+      <Vertex x="6200" y="2640" z="0"/>
+      <Vertex x="6200" y="1020" z="0"/>
+      <Vertex x="-6600" y="1020" z="0"/>
+    </Perimeter>
+    <Nowalk>
+      <Zone x="-6600" y="1020" width="720" height="180"/>
+      <Zone x="-480" y="1020" width="3600" height="180"/>
+      <Zone x="5640" y="1020" width="360" height="180"/>
+      <Zone x="-6600" y="1200" width="180" height="180"/>
+      <Zone x="60" y="1200" width="2520" height="180"/>
+      <Zone x="6000" y="1200" width="180" height="180"/>
+      <Zone x="780" y="1380" width="1080" height="180"/>
+      <Zone x="-6600" y="1560" width="720" height="180"/>
+      <Zone x="-6600" y="1740" width="720" height="180"/>
+      <Zone x="4920" y="1740" width="1260" height="180"/>
+      <Zone x="-6600" y="1920" width="720" height="180"/>
+      <Zone x="-2820" y="1920" width="900" height="180"/>
+      <Zone x="-1020" y="1920" width="180" height="180"/>
+      <Zone x="5100" y="1920" width="1080" height="180"/>
+      <Zone x="-6600" y="2100" width="2880" height="180"/>
+      <Zone x="-2820" y="2100" width="900" height="180"/>
+      <Zone x="-1020" y="2100" width="720" height="180"/>
+      <Zone x="1500" y="2100" width="360" height="180"/>
+      <Zone x="2400" y="2100" width="360" height="180"/>
+      <Zone x="3660" y="2100" width="360" height="180"/>
+      <Zone x="5100" y="2100" width="1080" height="180"/>
+      <Zone x="-6600" y="2280" width="2880" height="180"/>
+      <Zone x="-3000" y="2280" width="1080" height="180"/>
+      <Zone x="-1020" y="2280" width="1440" height="180"/>
+      <Zone x="780" y="2280" width="5400" height="180"/>
+      <Zone x="-6600" y="2460" width="3060" height="180"/>
+      <Zone x="-3180" y="2460" width="1440" height="180"/>
+      <Zone x="-1020" y="2460" width="1440" height="180"/>
+      <Zone x="780" y="2460" width="5400" height="180"/>
+    </Nowalk>
+    <Nostand>
+      <Zone x="-120" y="1200" width="180" height="180"/>
+      <Zone x="4380" y="1560" width="360" height="180"/>
+      <Zone x="4560" y="1740" width="360" height="180"/>
+      <Zone x="4740" y="1920" width="360" height="180"/>
+      <Zone x="4920" y="2100" width="180" height="180"/>
+    </Nostand>
+
+
+</Layout>
+
+
+<Sounds>
+	<Sound name="radio" type="OWPop" />
+</Sounds>
+
+	<Actions>
+		<!-- walk to the boardwalk when click on boardwalk arrow -->
+		<Action name="exit_to_boardwak" target="boardwalk arrow" trigger="click">
+			<step name="walk" action="walkto" target="6400,1400,0" delay="0" />
+			<step action="wait" target="walk" delay="500" />
+			<step action="setCancel" target="false" delay="500" />
+			<step action="gotoRoom" target="arcadia-boardwalk-exterior" delay="600"/>
+		</Action>
+
+		<Action name="exit_to_boardwak" target="boardwalk arrow2" trigger="click">
+			<step name="walk" action="walkto" target="6400,1400,0" delay="0" />
+			<step action="wait" target="walk" delay="500" />
+			<step action="setCancel" target="false" delay="500" />
+			<step action="gotoRoom" target="arcadia-boardwalk-exterior" delay="600"/>
+		</Action>
+		<!-- show boardwalk arrow highlight on mouse over -->
+
+		<Action name="boarwalk_btn_over" target="boardwalk arrow" trigger="over">
+			<step action="show" target="boardwalk button" delay="0" />
+		</Action>
+
+
+		<!-- hide boardwalk arrow highlight on mouse out -->
+
+		<Action name="boarwalk_btn_out" target="boardwalk arrow" trigger="out">
+			<step action="hide" target="boardwalk button" delay="0" />
+		</Action>
+
+
+		<!-- go to skyscope when click on scope -->
+		<Action name="exit_to_skyscope" target="skyscope" trigger="click">
+			<step action="gotoRoom" target="skyscope" delay="0"/>
+		</Action>
+
+		<Action name="scope_anim" target="skyscope" trigger="over" >
+			<step action="playOnceForward" target="scope" />
+		</Action>
+
+		<!--Commented out for BENTO-->
+		<Action name="snaps_anim" target="snaps_door" trigger="over" >
+			<step action="playOnceForward" target="snaps_sign" />
+		</Action>
+
+		<!-- when click on snaps door, walk to snaps, open door, walk through door and go to snaps -->
+
+		<!-- set into place during BENTO only -->
+		<!--<Action name="exit_to_snaps" target="snaps_door" trigger="click">
+			<step name="walk" action="walkto" target="2055,2100,0" delay="0" />
+			<step action="wait" target="walk" delay="200" />
+			<step action="setCancel" target="false" delay="200" />
+			<step action="trigger" target="snaps_door_anim" delay="400" />
+			<step action="hide" target="me" delay="550" />
+			<step action="gotoRoom" target="snaps" delay="700" />
+		</Action>-->
+
+		<!--COMMENTED OUT FOR BENTO THIS IS THE OLD VERSION PLEASE BRING BACK AFTER BENTO-->
+			<Action name="exit_to_snaps" target="snaps_door" trigger="click">
+			<step name="walk" action="walkto" target="2055,2100,0" delay="0" />
+			<step action="wait" target="walk" delay="500" />
+			<step action="setCancel" target="false" delay="500" />
+			<step action="trigger" target="snaps_door_anim" delay="800" />
+			<step action="walkto" target="2000,2500,0" delay="1000" />
+			<step action="hide" target="me" delay="1600" />
+			<step action="gotoRoom" target="snaps" delay="2500" />
+		</Action>
+
+		<!-- open snaps door, wait 1 sec, then close -->
+
+
+		<Action name="snaps_door_anim" target="snaps" trigger="destination" >
+			<step action="playOnceForward" target="snaps_door" delay="0" />
+			<step action="playOnceReverse" target="snaps_door" delay="1000" />
+		</Action>
+
+		<!-- when click on soho door, walk to ship, open door, walk thru door -->
+		<Action name="exit_to_soho_or_vegas" target="taxi_sign" trigger ="click">
+			<step action="event" target="taximenu" />
+		</Action>
+
+		<Action name="exit_to_soho_or_vegas2" target="taxi_pad" trigger ="click">
+			<step action="event" target="taximenu" />
+		</Action>
+
+		<Action name="exit_to_poker" target="poker" trigger="click" >
+			<step action="event" target="pokermenu" />
+		</Action>
+
+		<!--I THINK THIS IS OLD CODE SO IGNORE-->
+		<!--
+		<Action name="exit_to_soho" target="ship_door" trigger="click" >
+			<step name="walk" action="walkto" target="-3390,2500,0" delay="0" />
+			<step action="wait" target="walk" delay="500" />
+			<step action="setCancel" target="false" delay="500" />
+			<step action="trigger" target="ship_door_anim" delay="800" />
+			<step action="gotoRoom" target="districts/soho/exterior" delay="1300" />
+		</Action>
+		-->
+
+		<!-- open ship door, wait 1 sec, then close -->
+		<!--
+		<Action name="ship_door_anim" target="ship" trigger="destination" >
+			<step action="playOnceForward" target="ship_door" delay="0" />
+			<step action="playOnceReverse" target="ship_door" delay="1000" />
+		</Action>
+		-->
+
+		<!-- open atm popup dialog when click on atm -->
+		<!--<Action name="atm" target="atm" trigger="click" >
+			<step action="atm" target="atm" />
+		</Action>-->
+
+		<!-- play atm animation on mouse-over -->
+		<!--<Action name="atm_anim" target="atm" trigger="over" >
+			<step action="show" target="gem_atm" />
+			<step action="playOnceForward" target="gem_atm" />
+			<step action="hide" target="gem_atm" delay="8000" />
+		</Action>-->
+
+		<!-- seats -->
+		<!--
+		<Action name="sit1" target="chair1" trigger="click">
+			<step action="slot" target="0" />
+		</Action>
+		<Action name="sit2" target="chair2" trigger="click">
+			<step action="slot" target="1" />
+		</Action>
+		-->
+		<Action name="sit3" target="chair3" trigger="click">
+			<step action="slot" target="2" />
+		</Action>
+		<Action name="sit4" target="chair4" trigger="click">
+			<step action="slot" target="3" />
+		</Action>
+		<Action name="sit5" target="chair5" trigger="click">
+			<step action="slot" target="4" />
+		</Action>
+		<Action name="sit6" target="chair6" trigger="click">
+			<step action="slot" target="5" />
+		</Action>
+
+		<!--<Action name="popcap" target="popcap" trigger="click" exclude_static="true">
+			<step action="link" target="game" />
+		</Action>-->
+
+		<!--<Action name="eyes_anim" target="popcap" trigger="over" >
+			<step action="playOnceForward" target="eyes" />
+			<step action="playOnceForward" target="bottle" delay="2000"/>
+		</Action>-->
+
+
+		<Action name="shuttle_anim" target="ship_door" trigger="over" >
+			<step action="playOnceForward" target="shuttle" delay="0"/>
+			<step action="stop" target="shuttle" delay="5000"/>
+		</Action>
+
+
+		<Action name="shuttle_anim_start" target="shuttle" trigger="time" >
+			<step action="stop" target="shuttle" delay="1000"/>
+		</Action>
+
+		<!-- when click on splatterbox door, walk to door, open door, walk thru door -->
+		<Action name="exit_to_splatter" target="splatterbox_door" trigger="click" >
+			<step name="walk" action="walkto" target="-5000,1900,0" delay="0" />
+			<step action="wait" target="walk" delay="500" />
+			<step action="setCancel" target="false" delay="500" />
+			<step action="trigger" target="splatter_door_anim" delay="800" />
+			<step action="walkto" target="-5400,2400,0" delay="1000" />
+			<step action="hide" target="me" delay="1300" />
+			<step action="gotoRoom" target="splatterbox" delay="1300" />
+		</Action>
+
+		<!-- open door, wait 1 sec, then close -->
+		<Action name="splatter_door_anim" target="splatter" trigger="destination" >
+			<step action="playOnceForward" target="splatterbox_door" delay="0" />
+			<step action="playOnceReverse" target="splatterbox_door" delay="1000" />
+		</Action>
+
+		<!--Commented out for BENTO-->
+		<Action name="poker_cabana_anim" target="poker" trigger="over">
+			<step action="play" target="pokercabana,1" delay="0" />
+			<step action="stop" target="pokercabana" delay="1600" />
+		</Action>
+
+		<!--<Action name="pop_game_anim" target="pop_game" trigger="periodic" interval="10000" >
+			<step action="playOnceForward" target="pop_game,1" delay="0" />
+		</Action>-->
+
+		<!--<Action name="derby_sign_anim" target="derby_sign" trigger="periodic" interval="10000" >
+			<step action="playOnceForward" target="derby_sign,1" delay="0" />
+		</Action>-->
+
+		<Action name="splatter_sign" target="" trigger="periodic" interval="6000" >
+			<step action="playOnceForward" target="splatter_sign" delay="0" />
+		</Action>
+
+		<!--<Action name="race" target="race" trigger="click"  exclude_static="true">
+				<step action="walkto" target="-1600,1800,0" delay="0" />
+				<step action="gotoRoom" target="districts/pier/the_races" delay="1000" />
+		</Action>-->
+
+	</Actions>
+
+<Slots>
+	<Slot type="seat" x="-5250" y="1990" z="0" angle="0" />
+	<Slot type="seat" x="-5000" y="1990" z="0" angle="0" />
+	<Slot type="seat" x="-4390" y="1990" z="0" angle="0" />
+	<Slot type="seat" x="-4150" y="1990" z="0" angle="0" />
+	<Slot type="seat" x="-135" y="2050" z="0" angle="0" />
+	<Slot type="seat" x="140" y="2050" z="0" angle="0" />
+	<Slot type="seat" x="-0" y="0" z="0" angle="0" />
+</Slots>
+
+<NPCs>
+</NPCs>
+
+
+<Positions>
+	<Position x="5000" y="2100" z="0"/>
+	<Position x="-950" y="1880" z="0"/>
+</Positions>
+
+<DanceOff enabled="true" />
+
+<Throwing enabled="true" />
+
+<!-- location where a golden key may be placed -->
+<GoldenKey enabled="true" >
+	<Location x="-500" y="1800" z="0" />
+	<Location x="-3900" y="1900" z="0" />
+	<Location x="-3300" y="2000" z="0" />
+</GoldenKey>
+
+
+</Room>
