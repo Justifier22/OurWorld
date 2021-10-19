@@ -38,8 +38,8 @@
 	<Asset file="palm_tree.swf" name="tree" layer="1" x="-1163" y="135" required="false" />
 
 	<!--Comment car and bomb out for Halloween and BENTO-->
-	 <Asset file="car.swf" name="car" layer="1" x="-1194" y="517" required="false" />
-	<Asset file="bomb_01.swf" name="bomb" layer="1" x="723" y="251" required="false" /> 
+	<!-- <Asset file="car.swf" name="car" layer="1" x="-1194" y="517" required="false" />
+	<Asset file="bomb_01.swf" name="bomb" layer="1" x="723" y="251" required="false" /> -->
 	<Asset file="walkway.swf" name="walkway" layer="1" x="243" y="290" required="false" />
 	<Asset file="soho_sub_sign.swf" name="soho_sign" layer="1" x="1086" y="122" required="false" />
 
