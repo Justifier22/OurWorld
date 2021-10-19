@@ -1,0 +1,284 @@
+<Room name="Vegas Exterior" >
+
+	<Person x="100" y="1200" z="0" width="400" height="400" from="default"/>
+	<Person x="1300" y="2800" z="0" width="100" height="100" from="districts/vegas/shipwreck_lounge"/>
+	<Person x="-4000" y="1300" z="0" width="200" height="100" from="pier"/>
+	<Person x="-1900" y="2800" z="0" width="200" height="200" from="districts/vegas/vegas_clothing" />
+	<Person x="-1900" y="2800" z="0" width="200" height="200" from="districts/vegas/vegas_furniture" />
+<!--	<Person x="2600" y="1900" z="0" width="200" height="200" from="gamewrappers/slots"  />
+	<Person x="3400" y="1500" z="0" width="200" height="200" from="card_game"  />
+	<Person x="-3000" y="1800" z="0" width="200" height="200" from="slotmachine"  />
+	<Person x="-3000" y="1800" z="0" width="200" height="200" from="videopoker"  />
+	<Person x="-3000" y="1800" z="0" width="200" height="200" from="slotsmenu"  action="slots" />
+	<Person x="2400" y="1500" z="0" width="200" height="200" from="casinomenu"  action="casino" />-->
+	
+
+	<!-- how fast person walks in this room -->
+	<Walk speed="9000" framerate="40"/>
+
+	<!-- camera settings -->
+	<Camera x="0" y="-4450" z="2750" focalX="0" focalY="-300" focalLength="1600" />
+
+	<!-- scroll settings -->
+	<scroll minspeed="100" maxspeed="250" thresholdX="200"/>
+ 
+
+  <Assets>	
+	<Asset file="backdrop.jpg" scale="1.0" name="back" layer="0" coords="screen" x="-2000" y="0" />
+	<Asset file="mask_foreground.swf" name="fore" layer="51" x="-1316" y="327" blendmode="erase" />
+	<Asset file="mask_bridge.swf" name="mask_bridge" layer="50" x="-398" y="308" depth="2150" blendmode="erase" />
+
+	<!-- effects -->
+	<Asset file="limo_v4.swf" name="limo" layer="2" x="-1555" y="232" stopframe="0"  required="false" />
+	<Asset file="bridge_water_v4.swf" name="bridge_water" layer="2" coords="screen" x="-744" y="320" stopframe="0"  required="false" />
+	<Asset file="lucky7_v2.swf" name="lucky" layer="2" coords="screen" x="-513" y="0"  stopframe="0" required="false" />
+	<!-- <Asset file="palms_v4.swf" name="palms" layer="2" coords="screen" x="-1730" y="0"  stopframe="0" required="false" /> -->
+	<Asset file="poker_2.swf" name="poker" layer="2" coords="screen" x="885" y="0"  stopframe="0" required="false" />
+	<Asset file="ship_v4.swf"  name="shipreflection" layer="2" coords="screen" x="-150" y="0"  stopframe="0" required="false" />
+    <!--<Asset file="deluxe.swf" name="slots_v4" layer="2" coords="screen" x="-1128" y="0"  stopframe="0" required="false" />-->
+	<Asset file="vegas_v4.swf" name="vegas_sign" layer="2" coords="screen" x="1385" y="0"  stopframe="0" required="false" />
+	<!--<Asset file="casino.swf" name="casino_sign" layer="2" coords="screen" x="401" y="0"  stopframe="0" required="false" />-->
+	<Asset file="ship_wreck_sign.swf" name="ship_wreck_sign" layer="2" coords="screen" x="214" y="0"  stopframe="0" required="false" />
+	<Asset file="vegas_sign.swf" name="vegas_sign_2" layer="2" coords="screen" x="-1230" y="0"  stopframe="0" required="false" />
+	<Asset file="back_water.swf" name="back_water" layer="2" coords="screen" x="-261" y="85"  stopframe="0" required="false" />
+
+	<!-- Doors -->
+	<!--<Asset file="black_jack_door.swf" name="black_jack_door" layer="2" coords="screen" x="471" y="122" />-->
+	<Asset file="lucky7_door.swf"  name="lucky7_door" layer="2" coords="screen" x="-473" y="122" /> 
+	<!--<Asset file="sklots_door.swf"  name="slots_door" layer="2" coords="screen" x="-854" y="161" /> -->
+	<Asset file="poker_door.swf"  name="poker_door" layer="2" coords="screen" x="918" y="213" /> 
+	<Asset file="limo_door.swf"  name="limo_door" layer="2" coords="screen" x="-1249" y="293" /> 
+
+	<!-- code -->
+	<Asset file="/i/world/shared/bin/store_select.swf" scale="0.8" name="store_ui" type="app" layer="30" x="-430" y="160" visible="false"/>
+	<Asset file="/i/world/shared/bin/taximenu.swf" name="taximenu" layer="ui" x="0" y="0" />
+
+
+  
+  </Assets>
+
+	<Shapes>
+		<Shape name="shipwreck_door" coords="screen" fill="none" color1="0x00ff" layer="4" cursor="door">
+			<Vertex x="220" y="150" />
+			<Vertex x="320" y="150" />
+			<Vertex x="320" y="275" />
+			<Vertex x="220" y="275" />
+		</Shape>
+		<!--<Shape name="blackjack_door_hit" coords="screen" fill="none" color1="0xff" layer="4" cursor="door" hint="game(299)" >
+			<Vertex x="570" y="160" />
+			<Vertex x="700" y="160" />
+			<Vertex x="700" y="320" />
+			<Vertex x="570" y="320" />
+		</Shape>-->
+		<Shape name="lucky7_door_hit" coords="screen" fill="none" color1="0xff" layer="4" cursor="door" >
+			<Vertex x="-470" y="137" />
+			<Vertex x="-410" y="127" />
+			<Vertex x="-410" y="265" />
+			<Vertex x="-470" y="275" />
+		</Shape>
+		<!--<Shape name="slots_door_hit" coords="screen" fill="none" color1="0xff" layer="4" cursor="door" >
+			<Vertex x="-900" y="150" />
+			<Vertex x="-780" y="150" />
+			<Vertex x="-780" y="300" />
+			<Vertex x="-900" y="300" />
+		</Shape>-->
+		<Shape name="poker_door_hit" coords="screen" fill="none" color1="0xff" layer="4" cursor="door" >
+			<Vertex x="960" y="230" />
+			<Vertex x="1066" y="238" />
+			<Vertex x="1066" y="400" />
+			<Vertex x="960" y="388" />
+		</Shape>
+		<Shape name="limo_door_hit" coords="screen" fill="none" color1="0xff" layer="4" cursor="door" >
+			<Vertex x="-1253" y="344" />
+			<Vertex x="-1167" y="318" />
+			<Vertex x="-1137" y="418" />
+			<Vertex x="-1233" y="444" />
+		</Shape>
+		<Shape name="seat1" coords="screen" fill="none" color1="0xff" layer="4" cursor="chair" >
+			<Vertex x="25" y="340" />
+			<Vertex x="75" y="340" />
+			<Vertex x="75" y="390" />
+			<Vertex x="25" y="390" />
+		</Shape>
+		<Shape name="seat2" coords="screen" fill="none" color1="0xff00" layer="4" cursor="chair" >
+			<Vertex x="75" y="320" />
+			<Vertex x="125" y="320" />
+			<Vertex x="125" y="370" />
+			<Vertex x="75" y="370" />
+		</Shape>
+	</Shapes>
+
+  <Layout gridsquare="200">
+    <Perimeter coords="world">
+      <Vertex x="29.530201342281877" y="1456.040268456375" z="0"/>
+      <Vertex x="-107.33512786002692" y="1471.9380888290716" z="0"/>
+      <Vertex x="-485.5282199710565" y="1917.5832127351669" z="0"/>
+      <Vertex x="-890.6716417910449" y="2117.1641791044776" z="0"/>
+      <Vertex x="-1294.1176470588234" y="2020.588235294117" z="0"/>
+      <Vertex x="-1687.1408045977012" y="1871.8390804597705" z="0"/>
+      <Vertex x="-1676.229508196721" y="2107.377049180328" z="0"/>
+      <Vertex x="-971.5821812596006" y="2308.8325652841777" z="0"/>
+      <Vertex x="-488.1921824104234" y="2716.123778501629" z="0"/>
+      <Vertex x="-467.9824561403509" y="3269.2982456140353" z="0"/>
+      <Vertex x="-864.7166361974406" y="3593.8756855575875" z="0"/>
+      <Vertex x="-1290.4217926186293" y="3282.8646748681904" z="0"/>
+      <Vertex x="-1862.280701754386" y="3269.2982456140353" z="0"/>
+      <Vertex x="-2222.410865874363" y="3020.288624787775" z="0"/>
+      <Vertex x="-2576.2243285939967" y="2501.026856240126" z="0"/>
+      <Vertex x="-2697.94952681388" y="2490.0630914826497" z="0"/>
+      <Vertex x="-4205.397301349325" y="2146.701649175413" z="0"/>
+      <Vertex x="-3990.196078431373" y="1712.4649859943984" z="0"/>
+      <Vertex x="-4276.923076923077" y="1703.8461538461534" z="0"/>
+      <Vertex x="-4327.7027027027025" y="955.405405405406" z="0"/>
+      <Vertex x="-2319.277108433735" y="851.2048192771081" z="0"/>
+      <Vertex x="-1947.0551378446112" y="1063.7844611528817" z="0"/>
+      <Vertex x="-1154.4028950542822" y="857.5995174909522" z="0"/>
+      <Vertex x="-527.3529411764706" y="726.4705882352946" z="0"/>
+      <Vertex x="2901.1695906432747" y="696.1988304093566" z="0"/>
+      <Vertex x="3541.867469879518" y="851.2048192771081" z="0"/>
+      <Vertex x="4452.547770700637" y="1155.0955414012742" z="0"/>
+      <Vertex x="5492.7821522309705" y="1324.2782152230966" z="0"/>
+      <Vertex x="5473.263888888889" y="1661.1111111111104" z="0"/>
+      <Vertex x="4121.283783783783" y="1495.9459459459458" z="0"/>
+      <Vertex x="4073.928571428572" y="1835.7142857142865" z="0"/>
+      <Vertex x="3503.2608695652175" y="1926.811594202898" z="0"/>
+      <Vertex x="3111.5384615384614" y="1703.8461538461534" z="0"/>
+      <Vertex x="2942.3076923076924" y="1703.8461538461534" z="0"/>
+      <Vertex x="3132.286995515695" y="2126.980568011958" z="0"/>
+      <Vertex x="3328.71835443038" y="2512.025316455696" z="0"/>
+      <Vertex x="2095.2380952380954" y="2534.126984126984" z="0"/>
+      <Vertex x="2008.956386292835" y="2403.5825545171347" z="0"/>
+      <Vertex x="1805.9055118110236" y="2479.133858267717" z="0"/>
+      <Vertex x="1827.361563517915" y="2716.123778501629" z="0"/>
+      <Vertex x="1405.5555555555554" y="3071.367521367521" z="0"/>
+      <Vertex x="1008.0236486486486" y="2982.4324324324325" z="0"/>
+      <Vertex x="1269.5758564437194" y="2727.8140293637844" z="0"/>
+      <Vertex x="930.7692307692308" y="2319.2307692307695" z="0"/>
+      <Vertex x="302.11267605633805" y="1747.1830985915494" z="0"/>
+    </Perimeter>
+    <Nowalk>
+      <Zone x="-4327" y="696" width="3400" height="200"/>
+      <Zone x="3873" y="696" width="1600" height="200"/>
+      <Zone x="-2327" y="896" width="1200" height="200"/>
+      <Zone x="4473" y="896" width="1000" height="200"/>
+      <Zone x="5073" y="1096" width="400" height="200"/>
+      <Zone x="3873" y="1496" width="1200" height="200"/>
+      <Zone x="-4327" y="1696" width="400" height="200"/>
+      <Zone x="-327" y="1696" width="800" height="200"/>
+      <Zone x="2873" y="1696" width="400" height="200"/>
+      <Zone x="3873" y="1696" width="1600" height="200"/>
+      <Zone x="-4327" y="1896" width="200" height="200"/>
+      <Zone x="-1727" y="1896" width="600" height="200"/>
+      <Zone x="-527" y="1896" width="1200" height="200"/>
+      <Zone x="3073" y="1896" width="2400" height="200"/>
+      <Zone x="-4327" y="2096" width="800" height="200"/>
+      <Zone x="-1527" y="2096" width="2400" height="200"/>
+      <Zone x="3073" y="2096" width="2400" height="200"/>
+      <Zone x="-4327" y="2296" width="1800" height="200"/>
+      <Zone x="-927" y="2296" width="2000" height="200"/>
+      <Zone x="3273" y="2296" width="2200" height="200"/>
+      <Zone x="-4327" y="2496" width="2000" height="200"/>
+      <Zone x="-727" y="2496" width="2000" height="200"/>
+      <Zone x="3273" y="2496" width="2200" height="200"/>
+      <Zone x="-4327" y="2696" width="2200" height="200"/>
+      <Zone x="-527" y="2696" width="1800" height="200"/>
+      <Zone x="1873" y="2696" width="3600" height="200"/>
+      <Zone x="-4327" y="2896" width="2400" height="200"/>
+      <Zone x="-527" y="2896" width="6000" height="200"/>
+      <Zone x="-4327" y="3096" width="2600" height="200"/>
+      <Zone x="-527" y="3096" width="6000" height="200"/>
+      <Zone x="-4327" y="3296" width="3000" height="200"/>
+      <Zone x="-327" y="3296" width="5800" height="200"/>
+    </Nowalk>
+    <Nostand>
+      <Zone x="3473" y="1496" width="400" height="200"/>
+      <Zone x="3473" y="1696" width="400" height="200"/>
+      <Zone x="-3327" y="1896" width="400" height="200"/>
+      <Zone x="-3327" y="2096" width="400" height="200"/>
+      <Zone x="2473" y="2096" width="600" height="200"/>
+      <Zone x="1273" y="2296" width="600" height="200"/>
+      <Zone x="2473" y="2296" width="600" height="200"/>
+      <Zone x="1273" y="2496" width="600" height="200"/>
+      <Zone x="-1927" y="2696" width="400" height="200"/>
+      <Zone x="-1927" y="2896" width="400" height="200"/>
+    </Nostand>
+    <Start>
+      <Zone x="-3327" y="896" width="800" height="200"/>
+      <Zone x="-3327" y="1096" width="800" height="200"/>
+    </Start>
+  
+	</Layout>	
+	<Sounds>
+		<Sound name="radio" type="OWPop" />
+	</Sounds>
+
+	<Actions>
+		<Action name="door1" target="shipwreck_door" trigger="click" >
+			<step action="walkto" target="1360,2860,0" />
+			<step action="link" target="place/districts/vegas/shipwreck_lounge" delay="1000"/>
+		</Action>
+		<Action name="door3" target="limo_door_hit" trigger="click" >
+			<step action="walkto" target="-4100,1300,0" />
+			<step action="play" target="limo_door" delay="1000" />
+			<step action="link" target="place/pier" delay="2000" />
+		</Action>
+		<Action name="sit1" target="seat1" trigger="click">
+			<step action="slot" target="0" />
+		</Action>
+		<Action name="sit2" target="seat2" trigger="click">
+			<step action="slot" target="1" />
+		</Action>
+		<Action name="store_door_action" target="lucky7_door_hit" trigger="click">
+			<step action="walkto" target="-1500,2600,0" />
+			<step action="show" target="store_ui" delay="500"/>
+		</Action>
+		<Action name="store_door_click1" target="store_ui.button_Clothing" trigger="click">
+			<step action="hide" target="store_ui" />
+			<step action="walkto" target="-1930,2950,0" />
+			<step action="play" target="lucky7_door" delay="1000" />
+			<step action="link" target="place/districts/vegas/vegas_clothing" delay="1500"/>
+		</Action>
+		<Action name="store_door_click2" target="store_ui.button_Furniture" trigger="click">
+			<step action="hide" target="store_ui" />
+			<step action="walkto" target="-1930,2950,0" />
+			<step action="play" target="lucky7_door" delay="1000" />
+			<step action="link" target="place/districts/vegas/vegas_furniture" delay="1500" />
+		</Action>
+		<Action name="store_door_close" target="room" trigger="click">
+			<step action="hide" target="store_ui" />
+		</Action>
+		<Action name="poker" target="poker_door_hit" trigger="click">
+			<step action="event" target="pokermenu"/>
+		</Action>
+<!--		<Action name="casino" target="blackjack_door_hit" trigger="click" exclude_static="true">
+			<step action="link" target="menu/vegas"/>
+		</Action>
+		<Action name="slots" target="slots_door_hit" trigger="click">
+			<step action="link" target="menu/slots"/>
+		</Action>
+-->	</Actions>
+
+	<!-- Slots are places that only one person can occupy at a time, e.g. a chair.  Slots are referenced based on order in this list. -->
+	<Slots>
+		<Slot type="seat" x="380" y="1660" z="0" angle="35" />
+		<Slot type="seat" x="460" y="1730" z="0" angle="35" />
+	</Slots>
+
+	<!-- NPCs are characters generated and controlled by the server -->
+	<NPCs>
+	</NPCs>
+
+	<!-- Positions are locations that are referenced by NPCs.  Allows us to move an NPC in world w/o rebuilding quests -->
+	<Positions>
+	</Positions>
+
+	<DanceOff enabled="true"/>
+	<Throwing enabled="true" />
+
+	<!-- location where a golden key may be placed -->
+	<GoldenKey enabled="true" >
+		<Location x="1600" y="2260" z="0" />
+	</GoldenKey>
+
+</Room>
+
