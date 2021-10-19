@@ -24,7 +24,7 @@
  
 
   <Assets>	
-	<Asset file="backdrop.jpg" scale="1.0" name="back" layer="0" coords="screen" x="-2000" y="0" />
+	<Asset file="backdrop_oct.jpg" scale="1.0" name="back" layer="0" coords="screen" x="-2000" y="0" />
 	<Asset file="mask_foreground.swf" name="fore" layer="51" x="-1316" y="327" blendmode="erase" />
 	<Asset file="mask_bridge.swf" name="mask_bridge" layer="50" x="-398" y="308" depth="2150" blendmode="erase" />
 
