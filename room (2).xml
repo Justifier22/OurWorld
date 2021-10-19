@@ -1,0 +1,560 @@
+<Room name="soho exterior" width="4000" height="658" >
+
+<Person x="0" y="1500" width="200" height="200" from="default" />
+<Person x="6200" y="2800" width="100" height="100" from="pier" />
+<Person x="-600" y="2000" width="400" height="400" from="districts/soho/ladyking_furniture" />
+<Person x="-600" y="2000" width="400" height="400" from="districts/soho/ladyking_clothing" />
+<Person x="-2700" y="2500" width="800" height="400" from="districts/soho/catwalk" />
+
+<!-- ADD THIS WHEN PARK IS OPEN -->
+<Person x="-3300" y="3000" width="800" height="400" from="districts/soho/soho_park" />
+<Person x="-5400" y="2000" width="800" height="400" from="districts/soho/elevated_designs_clothing" />
+<Person x="-3200" y="2000" width="800" height="400" from="districts/soho/soho_salon" />
+<Person x="-7500" y="2500" width="400" height="200" from="districts/beat_street/exterior" />
+<Person x="-3300" y="2800" width="800" height="400" from="npc96012" />
+<Person x="3000" y="2600" width="400" height="400" from="coinshop" />
+
+
+<Walk speed="9000" framerate="40" />
+
+<Camera x="200" y="-6950" z="3650" focalX="0" focalY="-450" focalLength="2330" />
+
+<scroll minspeed="100" maxspeed="250" thresholdX="200" />
+
+<Assets>
+  <!-- background -->
+  <!--for use with BENTO only-->
+  <!--<Asset file="soho_bento.jpg" scale="1.0" name="back" layer="1" coords="screen" x="-2000" y="0"/>-->
+
+	<!--commented out during bento-->
+  <Asset file="backdrop.jpg" scale="1.0" name="back" layer="1" coords="screen" x="-2000" y="0"/>
+
+  <!-- masks -->
+  <Asset file="mask_fountain.swf" scale="1.0" name="mask_fountain" layer="50" coords="screen" x="116" y="266" depth="2600" blendmode="erase"/>
+  <Asset file="mask_foreground.swf" scale="1.0" name="mask_foreground" layer="51" coords="screen" x="-1389" y="460" depth="0" blendmode="erase" />
+<!--
+  <Asset file="mask_cafetable1.swf" scale="1.0" name="mask_cafetable1" layer="50" coords="screen" x="535" y="167" depth="3600" blendmode="erase" />
+  <Asset file="mask_table1.png" scale="1.0" name="mask_table1" layer="50" coords="screen" x="535" y="167" depth="3450" blendmode="erase" />
+
+  <Asset file="mask_cafetable2.swf" scale="1.0" name="mask_cafetable2" layer="50" coords="screen" x="401" y="157" depth="3800" blendmode="erase" />
+  <Asset file="mask_table2.png" scale="1.0" name="mask_table2" layer="50" coords="screen" x="401" y="157" depth="3700" blendmode="erase" />-->
+  <!--<Asset file="mask_overhang.swf" scale="1.0" name="mask_overhang" layer="50" coords="screen" x="-896" y="40" depth="3600" blendmode="erase" />-->
+
+
+  <!-- doors -->
+  <Asset file="ship_door.swf" scale="1.0" name="ship_door" layer="49" coords="screen" x="1461" y="224" depth="2000" cursor="door" />
+  <Asset file="ed_door.swf" scale="1" name="ed_door" layer="30" x="-1422" y="197" />
+  <Asset file="ladyking_door.swf" scale="1" name="lk_door" layer="50" x="-255" y="105" depth="3000" />
+
+  <!-- effects -->
+  <Asset file="soho_fountain.swf" scale="1.0" name="soho_fountain" layer="50" coords="screen" x="52" y="62" depth="2000" required="false" />
+  <Asset file="coin_fountain_splash.swf" scale="1.0" name="coin_splash" layer="50" coords="screen" x="200" y="260" depth="2000" required="false" stopframe="0" />
+  <Asset file="soho_sign_01.swf" scale="1.0" name="soho_sign_01" layer="10" coords="screen" x="1236" y="49" depth="2000" required="false"/>
+  <Asset file="jet_cab.swf" scale="1.0" name="jet_cab" layer="10" coords="screen" x="1320" y="90" depth="2000" required="false"/>
+  <Asset file="moon.swf" scale="1.0" name="moon" layer="10" coords="screen" x="292" y="23" depth="2000" required="false" />
+  <Asset file="ladyking.swf" scale="1.0" name="ladyking" layer="10" coords="screen" x="-320" y="0" depth="2000" required="false" />
+  <Asset file="catwalk.swf" scale="1.0" name="catwalk" layer="10" coords="screen" x="-599" y="8" depth="2000" required="false" />
+  <Asset file="elevated_design.swf" scale="1.0" name="elevated_design" layer="10" coords="screen" x="-1536" y="0" depth="2000" required="false" />
+  <Asset file="peacock_anim_v1.swf" scale="1.0" name="peacock" layer="10" coords="screen" x="472" y="0" depth="2000" required="false" stopframe="0" cursor="hand" />
+
+  <Asset file="/i/world/shared/bin/store_select.swf" scale="0.8" name="store_ui" type="app" layer="51" coords="screen" x="-150" y="250" visible="false"/>
+ <!--HALLOWEEN COMMENTING OUT door and salon sign-->
+   <Asset file="salon_door.swf" scale="1" name="salon_door" layer="40" x="-1170" y="146" depth="3000" required="false" />
+  <Asset file="soho_salon_02.swf" name="salon_sign" layer="40" x="-1100" y="9" required="false"  />	 
+
+  <Asset file="soho.swf" scale="1" name="soho" type="app" layer="0" x="0" y="0" />
+
+
+</Assets>
+
+<Shapes>
+
+	<Shape name="fountain_shape" coords="screen" fill="none" color1="0x00ff00" layer="2" cursor="hand" >
+		<Vertex x="250" y="270" />
+		<Vertex x="350" y="270" />
+		<Vertex x="350" y="490" />
+		<Vertex x="250" y="490" />
+	</Shape>
+
+	<Shape name="ladyking_entry" coords="screen" fill="none" color1="0x00ff00" layer="2" cursor="door" >
+		<Vertex x="-230" y="170" />
+		<Vertex x="-70" y="170" />
+		<Vertex x="-70" y="390" />
+		<Vertex x="-230" y="390" />
+	</Shape>
+
+	<!-- ADD THIS WHEN PARK IS OPEN -->
+
+	<Shape name="soho_park" coords="screen" fill="none" color1="0x00ff00" layer="2" cursor="door" >
+		<Vertex x="-770" y="30" />
+		<Vertex x="-620" y="30" />
+		<Vertex x="-620" y="250" />
+		<Vertex x="-770" y="250" />
+	</Shape>
+
+	<Shape name="elevated_entry" coords="screen" fill="none" color1="0x00ff00" layer="2" cursor="door" >
+		<Vertex x="-1410" y="210" />
+		<Vertex x="-1285" y="210" />
+		<Vertex x="-1285" y="425" />
+		<Vertex x="-1410" y="425" />
+	</Shape>
+
+	<Shape name="catwalk_entry" coords="screen" fill="none" color1="0x00ff00" layer="2" cursor="door">
+		<Vertex x="-550" y="210" />
+		<Vertex x="-495" y="220" />
+		<Vertex x="-495" y="370" />
+		<Vertex x="-550" y="343" />
+	</Shape>
+
+	<Shape name="ship_entry" coords="screen" fill="none" color1="0x00ff00" layer="2" cursor="door" >
+		<Vertex x="1200" y="395" />
+		<Vertex x="1540" y="400" />
+		<Vertex x="1600" y="430" />
+		<Vertex x="1260" y="435" />
+	</Shape>
+
+	<Shape name="ship_walkway" coords="screen" fill="none" color1="0x00ff" layer="3" >
+		<Vertex x="1480" y="400" />
+		<Vertex x="1550" y="400" />
+		<Vertex x="1600" y="430" />
+		<Vertex x="1520" y="430" />
+	</Shape>
+
+	<!--
+	<Shape name="seat1" coords="screen" fill="none" color1="0x00ff" layer="4" cursor="chair">
+		<Vertex x="377" y="277" />
+		<Vertex x="405" y="274" />
+		<Vertex x="434" y="290" />
+		<Vertex x="404" y="296" />
+	</Shape>
+
+	<Shape name="seat2" coords="screen" fill="none" color1="0x00ff" layer="4" cursor="chair">
+		<Vertex x="488" y="283" />
+		<Vertex x="506" y="274" />
+		<Vertex x="540" y="288" />
+		<Vertex x="518" y="296" />
+	</Shape>
+
+	<Shape name="seat3" coords="screen" fill="none" color1="0x00ff" layer="4" cursor="chair">
+		<Vertex x="636" y="300" />
+		<Vertex x="668" y="297" />
+		<Vertex x="686" y="315" />
+		<Vertex x="648" y="318" />
+	</Shape>
+
+	<Shape name="seat4" coords="screen" fill="none" color1="0x00ff" layer="4" cursor="chair">
+		<Vertex x="800" y="302" />
+		<Vertex x="826" y="298" />
+		<Vertex x="856" y="313" />
+		<Vertex x="830" y="318" />
+	</Shape>
+
+	<Shape name="seat5" coords="screen" fill="none" color1="0x00ff" layer="4" cursor="chair">
+		<Vertex x="910" y="304" />
+		<Vertex x="928" y="297" />
+		<Vertex x="960" y="312" />
+		<Vertex x="944" y="319" />
+	</Shape>
+
+	<Shape name="seat6" coords="screen" fill="none" color1="0x00ff" layer="4" cursor="chair">
+		<Vertex x="1114" y="308" />
+		<Vertex x="1150" y="305" />
+		<Vertex x="1169" y="322" />
+		<Vertex x="1132" y="325" />
+	</Shape>
+
+	<Shape name="seat7" coords="screen" fill="none" color1="0x00ff" layer="4" cursor="chair">
+		<Vertex x="570" y="272" />
+		<Vertex x="608" y="272" />
+		<Vertex x="610" y="300" />
+		<Vertex x="575" y="303" />
+	</Shape>
+
+	<Shape name="seat8" coords="screen" fill="none" color1="0x00ff" layer="4" cursor="chair">
+		<Vertex x="1030" y="290" />
+		<Vertex x="1064" y="290" />
+		<Vertex x="1072" y="318" />
+		<Vertex x="1040" y="318" />
+	</Shape>
+	-->
+
+	<Shape name="marketplace" coords="screen" fill="none" color1="0x00ff" layer="45" cursor="hand">
+		<Vertex x="-1090" y="263" />
+		<Vertex x="-1190" y="263" />
+		<Vertex x="-1190" y="400" />
+		<Vertex x="-1090" y="400" />
+	</Shape>
+
+	<Shape name="salon_door_hit" coords="screen" fill="none" color1="0x00ff" layer="41" cursor="door">
+		<Vertex x="-1020" y="200" />
+		<Vertex x="-970" y="190" />
+		<Vertex x="-970" y="385" />
+		<Vertex x="-1020" y="400" />
+	</Shape>
+
+	<Shape name="salon_entry" coords="screen" fill="none" color1="0x00ff" layer="41" cursor="door">
+		<Vertex x="-975" y="380" />
+		<Vertex x="-1020" y="396" />
+		<Vertex x="-1100" y="396" />
+		<Vertex x="-980" y="315" />
+	</Shape>
+
+	<Shape name="beat_street" coords="screen" fill="none" color1="0x00ff" layer="41" cursor="door">
+		<Vertex x="-2000" y="250" />
+		<Vertex x="-1900" y="250" />
+		<Vertex x="-1900" y="450" />
+		<Vertex x="-2000" y="450" />
+	</Shape>
+
+	<Shape name="shop" coords="screen" fill="none" color1="0x00ff" layer="51" cursor="hand">
+		<Vertex x="670" y="265" />
+		<Vertex x="795" y="270" />
+		<Vertex x="785" y="335" />
+		<Vertex x="660" y="325" />
+	</Shape>
+
+</Shapes>
+
+
+<Layout gridsquare="200" >
+<Perimeter coords="world" >
+	<Vertex x="-7200" y="5500" z="0" />
+	<Vertex x="6800" y="5500" z="0" />
+	<Vertex x="6800" y="1400" z="0" />
+	<Vertex x="-7200" y="1400" z="0" />
+</Perimeter>
+    <Nowalk>
+      <Zone x="-7200" y="1400" width="4200" height="200"/>
+      <Zone x="2200" y="1400" width="4600" height="200"/>
+      <Zone x="-7200" y="1600" width="2200" height="200"/>
+      <Zone x="3200" y="1600" width="3600" height="200"/>
+      <Zone x="-7200" y="1800" width="1000" height="200"/>
+      <Zone x="800" y="1800" width="1200" height="200"/>
+      <Zone x="3800" y="1800" width="3000" height="200"/>
+      <Zone x="-7200" y="2000" width="400" height="200"/>
+      <Zone x="600" y="2000" width="1600" height="200"/>
+      <Zone x="4000" y="2000" width="2800" height="200"/>
+      <Zone x="600" y="2200" width="1600" height="200"/>
+      <Zone x="6000" y="2200" width="800" height="200"/>
+      <Zone x="-6400" y="2400" width="600" height="200"/>
+      <Zone x="600" y="2400" width="1800" height="200"/>
+      <Zone x="6000" y="2400" width="800" height="200"/>
+      <Zone x="-6600" y="2600" width="1000" height="200"/>
+      <Zone x="-5200" y="2600" width="1000" height="200"/>
+      <Zone x="800" y="2600" width="1400" height="200"/>
+      <Zone x="5200" y="2600" width="1000" height="200"/>
+      <Zone x="6600" y="2600" width="200" height="200"/>
+      <Zone x="-7200" y="2800" width="200" height="200"/>
+      <Zone x="-6600" y="2800" width="1000" height="200"/>
+      <Zone x="-5200" y="2800" width="1000" height="200"/>
+      <Zone x="-1400" y="2800" width="200" height="200"/>
+      <Zone x="-7200" y="3000" width="3000" height="200"/>
+      <Zone x="-2000" y="3000" width="1200" height="200"/>
+      <Zone x="0" y="3000" width="800" height="200"/>
+      <Zone x="6200" y="3000" width="400" height="200"/>
+      <Zone x="-7200" y="3200" width="3600" height="200"/>
+      <Zone x="-2200" y="3200" width="1400" height="200"/>
+      <Zone x="0" y="3200" width="1200" height="200"/>
+      <Zone x="5000" y="3200" width="1800" height="200"/>
+      <Zone x="-7200" y="3400" width="3600" height="200"/>
+      <Zone x="-2800" y="3400" width="200" height="200"/>
+      <Zone x="-2200" y="3400" width="3400" height="200"/>
+      <Zone x="2800" y="3400" width="4000" height="200"/>
+      <Zone x="-7200" y="3600" width="3600" height="200"/>
+      <Zone x="-2800" y="3600" width="4000" height="200"/>
+      <Zone x="2200" y="3600" width="4600" height="200"/>
+      <Zone x="-7200" y="3800" width="3800" height="200"/>
+      <Zone x="-2800" y="3800" width="4200" height="200"/>
+      <Zone x="2000" y="3800" width="4800" height="200"/>
+      <Zone x="-7200" y="4000" width="3800" height="200"/>
+      <Zone x="-2800" y="4000" width="4200" height="200"/>
+      <Zone x="2000" y="4000" width="4800" height="200"/>
+      <Zone x="-7200" y="4200" width="3600" height="200"/>
+      <Zone x="-3000" y="4200" width="4400" height="200"/>
+      <Zone x="2000" y="4200" width="4800" height="200"/>
+      <Zone x="-7200" y="4400" width="3600" height="200"/>
+      <Zone x="-3000" y="4400" width="4400" height="200"/>
+      <Zone x="2000" y="4400" width="4800" height="200"/>
+      <Zone x="-7200" y="4600" width="3600" height="200"/>
+      <Zone x="-3000" y="4600" width="4600" height="200"/>
+      <Zone x="2000" y="4600" width="4800" height="200"/>
+      <Zone x="-7200" y="4800" width="3600" height="200"/>
+      <Zone x="-3200" y="4800" width="4800" height="200"/>
+      <Zone x="2000" y="4800" width="4800" height="200"/>
+      <Zone x="-7200" y="5000" width="3600" height="200"/>
+      <Zone x="-3200" y="5000" width="10000" height="200"/>
+      <Zone x="-7200" y="5200" width="3400" height="200"/>
+      <Zone x="-3200" y="5200" width="10000" height="200"/>
+    </Nowalk>
+    <Nostand>
+      <Zone x="-3600" y="2800" width="200" height="200"/>
+      <Zone x="-3800" y="3000" width="400" height="200"/>
+      <Zone x="-3600" y="3200" width="200" height="200"/>
+    </Nostand>
+
+</Layout>
+
+<Sounds>
+	<Sound name="radio" type="OWPop" />
+
+	<Sound name="sound_splash" file="audio/coin_fountain.mp3" volume="75" />
+
+	<Sound name="fountain" file="audio/soho_fountain.mp3" type="ambient" >
+		<transform x="-8000" volume="6" panning="0" />
+		<transform x="-1000" volume="35" panning="0" />
+		<transform x="1500" volume="85" panning="0" />
+		<transform x="4000" volume="35" panning="0" />
+		<transform x="+8000" volume="6" panning="0" />
+	</Sound>
+</Sounds>
+
+<Actions>
+
+		<Action name="salon" target="salon_door_hit" trigger="click">
+			<step name="walk" action="walkto" target="-3785,2850,0" delay="0" />
+			<step action="wait" target="walk" delay="500" />
+			<step action="setCancel" target="false" delay="500"/>
+			<step action="walkto" target="-4200,3250,0" delay="600" />
+			<step action="gotoRoom" target="districts/soho/soho_salon" delay="1600" />
+		</Action>
+
+		<Action name="salon_door_anim" target="salon_entry" trigger="destination" >
+			<step action="setCancel" target="false" />
+			<step action="playOnceForward" target="salon_door" />
+			<step action="playOnceReverse" target="salon_door" delay="1000"/>
+		</Action>
+
+		<Action name="ladyking_door" target="ladyking_entry" trigger="destination" >
+			<step action="setCancel" target="false" />
+			<step action="playOnceForward" target="lk_door" />
+			<step action="playOnceReverse" target="lk_door" delay="1000"/>
+		</Action>
+
+		<Action name="laydking" target="ladyking_entry" trigger="click">
+			<step action="walkto" target="-420,2500,0" delay="0" />
+			<step action="show" target="store_ui" delay="200" />
+		</Action>
+
+		<Action name="store_door_click1" target="store_ui.button_Clothing" trigger="click">
+			<step action="walkto" target="-420,3300,0" delay="0" />
+			<step action="gotoRoom" target="districts/soho/ladyking_clothing" delay="1200"/>
+		</Action>
+
+		<Action name="store_door_click2" target="store_ui.button_Furniture" trigger="click">
+			<step action="walkto" target="-420,3300,0" delay="0" />
+			<step action="gotoRoom" target="districts/soho/ladyking_furniture" delay="1200"/>
+		</Action>
+
+		<!-- hide store select UI if click anywhere outside the UI -->
+		<Action name="store_door_close" target="room" trigger="click">
+			<step action="hide" target="store_ui" delay="0" />
+		</Action>
+
+		<Action name="elevated" target="elevated_entry" trigger="click">
+			<step name="walk" action="walkto" target="-5250,2400,0" delay="0" />
+			<step action="wait" target="walk" delay="500" />
+			<step action="walkto" target="-5500,3000,0" delay="600" />
+			<step action="gotoRoom" target="districts/soho/elevated_designs_clothing" delay="1600" />
+		</Action>
+
+		<Action name="catwalk" target="catwalk_entry" trigger="click">
+			<step action="walkto" target="-2275,3540,0" delay="0" />
+			<step action="link" target="menu/contest" />
+		</Action>
+
+		<Action name="ship" target="ship_entry" trigger="click">
+			<step name="walk" action="walkto" target="6300,2900,0" delay="0" />
+			<step action="wait" target="walk" delay="500" />
+			<step action="setCancel" target="false" delay="500"/>
+			<step name="walk2" action="walkto" target="6900,2900,0" delay="600" />
+			<step action="hide" target="me" delay="1600" />
+			<step action="gotoRoom" target="pier" delay="1600" />
+		</Action>
+
+		<Action name="ship2" target="ship_door" trigger="click">
+			<step name="walk" action="walkto" target="6300,2900,0" delay="0" />
+			<step action="wait" target="walk" delay="500" />
+			<step action="setCancel" target="false" delay="500"/>
+			<step name="walk2" action="walkto" target="6900,2900,0" delay="600" />
+			<step action="hide" target="me" delay="1600" />
+			<step action="gotoRoom" target="pier" delay="1600" />
+		</Action>
+
+		<Action name="ship_door" target="ship_walkway" trigger="destination" >
+			<step action="setCancel" target="false" />
+			<step action="show" target="jet_cab" />
+			<step action="play" target="jet_cab" />
+			<step action="playOnceForward" target="ship_door" />
+			<step action="playOnceReverse" target="ship_door" delay="1000"/>
+		</Action>
+
+		<Action name="ladyking_door" target="ladyking_entry" trigger="destination" >
+			<step action="setCancel" target="false" />
+			<step action="playOnceForward" target="lk_door" />
+			<step action="playOnceReverse" target="lk_door" delay="1000"/>
+		</Action>
+
+		<Action name="ed_door" target="elevated_entry" trigger="destination" >
+			<step action="setCancel" target="false" />
+			<step action="playOnceForward" target="ed_door" />
+			<step action="playOnceReverse" target="ed_door" delay="1000"/>
+		</Action>
+
+		<!-- effects -->
+		<Action name="soho_sign" target="soho_sign_01" trigger="periodic" interval="8000" >
+			<step action="playOnceForward" target="soho_sign_01" />
+		</Action>
+
+		<Action name="jeb_cab" target="ship_door" trigger="over" >
+			<step action="show" target="jet_cab" />
+			<step action="play" target="jet_cab" />
+			<step action="stop" target="jet_cab" delay="2000" />
+			<step action="hide" target="jet_cab" delay="2000" />
+		</Action>
+
+		<Action name="moon" target="moon" trigger="periodic" interval="10000" >
+			<step action="playOnceForward" target="moon" />
+		</Action>
+
+		<Action name="ladyking_anim" target="ladyking_entry" trigger="over" >
+			<step action="playOnceForward" target="ladyking" />
+		</Action>
+
+		<Action name="catwalk_anim" target="catwalk_entry" trigger="over" >
+			<step action="playOnceForward" target="catwalk" />
+		</Action>
+
+		<Action name="elevated_anim" target="elevated_entry" trigger="over" >
+			<step action="playOnceForward" target="elevated_design" />
+		</Action>
+
+		<Action name="fountain" target="soho_fountain" trigger="time" >
+			<step action="stop" target="soho_sign_01" delay="2000"/>
+			<step action="stop" target="soho_fountain" delay="2000"/>
+			<step action="play" target="soho_fountain" delay="3000"/>
+		</Action>
+
+		<!--
+		<Action name="sit1" target="seat1" trigger="click">
+			<step action="slot" target="0"/>
+		</Action>
+
+		<Action name="sit2" target="seat2" trigger="click">
+			<step action="slot" target="1"/>
+		</Action>
+
+		<Action name="sit3" target="seat3" trigger="click">
+			<step action="slot" target="2"/>
+		</Action>
+
+		<Action name="sit4" target="seat4" trigger="click">
+			<step action="slot" target="3"/>
+		</Action>
+
+		<Action name="sit5" target="seat5" trigger="click">
+			<step action="slot" target="4"/>
+		</Action>
+
+		<Action name="sit6" target="seat6" trigger="click">
+			<step action="slot" target="5"/>
+		</Action>
+
+		<Action name="sit7" target="seat7" trigger="click">
+			<step action="slot" target="6"/>
+		</Action>
+
+		<Action name="sit8" target="seat8" trigger="click">
+			<step action="slot" target="7"/>
+		</Action>
+		-->
+
+		<Action name="marketplace" target="marketplace" trigger="click">
+			<step action="link" target="shop/marketplace" />
+		</Action>
+
+		<!-- commenting out when its halloween since the sign will be missing-->
+		 <Action name="salon_sign" target="salon_door" trigger="over"  >
+  			<step action="playOnceForward" target="salon_sign" />
+			<step action="stop" target="salon_sign" delay="3000" />
+  		</Action> 
+
+
+		<Action name="beat_street" target="beat_street" trigger="click" >
+			<step name="walk" action="walkto" target="-8000,2700,0" />
+			<step action="wait" target="walk" delay="300" />
+			<step action="gotoRoom" target="districts/beat_street/exterior" delay="500" />
+		</Action>
+
+<!-- ADD THIS WHEN PARK IS OPEN -->
+		<Action name="soho_park" target="soho_park" trigger="click" >
+			<step name="walk" action="walkto" target="-3600,5200,0" />
+			<step action="wait" target="walk" delay="300" />
+			<step action="gotoRoom" target="districts/soho/soho_park" delay="500" />
+		</Action>
+
+		<Action name="shop" target="shop" trigger="click" >
+			<step action="event" target="shop" />
+		</Action>
+		<Action name="shop2" target="peacock" trigger="click">
+			<step action="event" target="shop" />
+		</Action>
+
+		<Action name="action_fountain" target="fountain_shape" trigger="click">
+			<step action="event" target="wish_dialog" />
+		</Action>
+
+</Actions>
+
+<Slots>
+	<Slot type="seat" x="2150" y="3760" z="0" angle="35" />
+	<Slot type="seat" x="2470" y="3750" z="0" angle="325" />
+	<Slot type="seat" x="3040" y="3480" z="0" angle="270" />
+	<Slot type="seat" x="3960" y="3460" z="0" angle="35" />
+	<Slot type="seat" x="4330" y="3460" z="0" angle="325" />
+	<Slot type="seat" x="5160" y="3380" z="0" angle="270" />
+	<Slot type="seat" x="2870" y="3599" z="0" angle="0" />
+	<Slot type="seat" x="4900" y="3500" z="0" angle="0" />
+	<Slot type="seat" x="0" y="0" z="0" angle="0" />
+	<Slot type="seat" x="0" y="0" z="0" angle="0" />
+</Slots>
+
+<NPCs>
+</NPCs>
+
+<Positions>
+	<Position x="-3600" y="3100" z="0" />
+</Positions>
+
+<DanceOff enabled="true" />
+
+<Throwing enabled="true" />
+
+
+<!-- location where a golden key may be placed -->
+<GoldenKey enabled="true" >
+	<Location x="-3500" y="5300" z="0" />
+	<Location x="3600" y="3600" z="0" />
+	<Location x="-30" y="1600" z="0" />
+	<Location x="-7100" y="2500" z="0" />
+</GoldenKey>
+
+
+	<Shop>
+		<Male>
+			<Item id="28780" />
+			<Item id="28777" />
+			<Item id="28771" />
+			<Item id="28774" />
+			<Item id="28789" />
+		</Male>
+		<Female>
+			<Item id="28786" />
+			<Item id="28783" />
+			<Item id="28771" />
+			<Item id="28774" />
+			<Item id="28789" />
+		</Female>
+	</Shop>
+
+
+</Room>
