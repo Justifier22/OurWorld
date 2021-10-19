@@ -1,0 +1,448 @@
+
+<Room name="electric_avenue exterior" >
+
+	<!-- location of person upon initial entry to room -->
+	<Person x="0" y="1800" z="0" width="1000" height="200" from="default"/>
+	<Person x="2100" y="2000" z="0" width="700" height="200" from="districts/electric_avenue/vinyl"/>
+	<Person x="4200" y="2200" z="0" width="1000" height="400" from="districts/electric_avenue/garage"/>
+	<Person x="-5300" y="2000" z="0" width="600" height="400" from="districts/electric_avenue/bluecow_clothing"/>
+	<Person x="-5300" y="2000" z="0" width="600" height="400" from="districts/electric_avenue/bluecow_furniture"/>
+	<Person x="-1500" y="2200" z="0" width="600" height="400" from="districts/electric_avenue/skin_deep"/>
+	<Person x="6400" y="2000" z="0" width="400" height="400" from="arcadia-boardwalk-exterior"/>
+	<Person x="-7200" y="2100" z="0" width="400" height="200" from="districts/wonderland/exterior"/>
+	<Person x="-2000" y="2100" z="0" width="400" height="200" from="pool_menu" action="pool_menu"/>
+	<Person x="-2000" y="2100" z="0" width="400" height="200" from="pool_game/menu" />
+	<Person x="-2000" y="2100" z="0" width="400" height="200" from="pool_game" action="pool_menu" />
+	<Person x="-2000" y="2100" z="0" width="400" height="200" from="districts/electric_avenue/rack_n_roll_lobby" />
+	<Person x="7000" y="2800" z="0" width="1000" height="200" from="npc96009"/>
+	<Person x="6400" y="2000" z="0" width="400" height="400" from="districts/electric_avenue/crew"/>
+
+
+	<!-- how fast person walks in this room -->
+	<Walk speed="8000" framerate="40"/>
+
+	<!-- camera settings -->
+	<Camera x="0" y="-3800" z="3350" focalX="0" focalY="-300" focalLength="1430" />
+
+	<!-- scroll settings -->
+	<scroll minspeed="80" maxspeed="250" thresholdX="180"/>
+
+	<ToolTips>
+		<ToolTip x="-1710" y="148" width="240" height="80" text="ea.tip.bluecow" />
+		<ToolTip x="-1648" y="310" width="138" height="78" text="ea.tip.derrick" />
+		<ToolTip x="-1420" y="114" width="234" height="30" text="ea.tip.furniture" />
+		<ToolTip x="-1110" y="112" width="210" height="40" text="ea.tip.clothing" />
+		<ToolTip x="-444" y="146" width="325" height="110" text="ea.tip.skindeep" />
+		<ToolTip x="472" y="122" width="250" height="130" text="ea.tip.vinyl" />
+		<ToolTip x="836" y="126" width="338" height="66" text="ea.tip.garage" />
+		<ToolTip x="-1809" y="231" width="70" height="48" text="ea.tip.wonderland" />
+	</ToolTips>
+
+	<Assets>
+		<!--for use with BENTO-->
+		<!--<Asset file="rnr_bento.jpg" scale="1.0" name="back" layer="1" coords="screen" x="-2000" y="0" />-->
+		<!-- for use with halloween -->
+		<!--<Asset file="backdrop_oct.jpg" scale="1.0" name="back" layer="1" coords="screen" x="-2000" y="0" />-->
+		<!--commented out for BENTO and halloween-->
+		 <Asset file="backdrop.jpg" scale="1.0" name="back" layer="1" coords="screen" x="-2000" y="0" /> 
+		<Asset file="rnr_midground_01.png" scale="1.0" name="mid" layer="50" coords="screen" x="-47" y="107" depth="2800" required="false"/>
+		<Asset file="rnr_midground_02.png" scale="1.0" name="mid2" layer="50" coords="screen" x="1176" y="157" depth="3000" required="false"/>
+		<Asset file="rnr_foreground_01.png" scale="1.0" name="fore" layer="90" coords="screen" x="-2000" y="0" />
+		<Asset file="rnr_foreground_02.png" scale="1.0" name="fore2" layer="91" coords="screen" x="0" y="0" />
+
+		<!-- doors -->
+		<Asset file="door_garage.swf" scale="1.0" name="garage_door" layer="50" coords="screen" x="895" y="198" depth="3100" />
+		<Asset file="door_flos.swf" scale="1.0" name="vinyl_door" layer="50" coords="screen" x="456" y="242" depth="2900" cursor="door" />
+		<Asset file="door_bluecow.swf" scale="1.0" name="cow_door" layer="5" coords="screen" x="-1249" y="207" cursor="door"/>
+		<Asset file="door_wonderland.swf" scale="1" name="star_door" layer="32" coords="screen" x="-1924" y="210" cursor="door" />
+		<Asset file="door_skindeep.swf" scale="1" name="skin_deep_door" layer="50" coords="screen" x="-364" y="185" depth="2800" cursor="door"/>
+
+		<!-- animations -->
+		<Asset file="keyboard.swf" scale="1.0" name="keyboard" layer="14" coords="screen" x="-49" y="382" visible="false"/>
+		<Asset file="lantern.swf" scale="1.0" name="lantern" layer="16" coords="screen" x="-1296" y="184" required="false"/>
+		<Asset file="lantern.swf" scale="1.0" name="lantern2" layer="16" coords="screen" x="-1137" y="186" required="false"/>
+		<Asset file="electric_box.swf" scale="1.0" name="electric_box" layer="13" coords="screen" x="826" y="232" required="false"/>
+		<Asset file="skin_deep_2.swf" scale="1" name="skin_deep_sign" layer="6" coords="screen" x="-446" y="10" required="false"/>
+		<Asset file="blue_cow_2.swf" scale="1.0" name="blue_cow_sign" layer="15" coords="screen" x="-1746" y="13" required="false"/>
+		<!--commented out for BENTO on the following 2 lines-->
+		<Asset file="flo_sign_2.swf" scale="1" name="diner_sign" layer="8" coords="screen" x="300" y="43" required="false" blendmode="erase"/>
+		<Asset file="flo_sign_3.swf" scale="1" name="diner_sign2" layer="50" coords="screen" x="35" y="0" required="false" depth="2799"/>
+
+		<Asset file="rnr_anim_3.swf" scale="1" name="rnr" layer="7" coords="screen" x="-730" y="192" required="false"/>
+		<Asset file="rnr_8_ball_2.swf" scale="1" name="rnr8ball" layer="7" coords="screen" x="-703" y="14" required="false"/>
+		<Asset file="/i/world/shared/assets/news_02.swf" name="news2" layer="50" coords="screen" x="1114" y="147" depth="2999" required="false"/>
+<!--		<Asset file="/i/world/shared/assets/gem_atm.swf" name="gem_atm" layer="10" coords="screen" x="-952" y="161" required="false" visible="false" />
+-->		<Asset file="wings.swf" name="wings" layer="10" x="1449" y="5" required="false" />
+		<Asset file="r_ring_01.swf" name="r_ring" layer="10" x="1331" y="298" required="false" />
+		<Asset file="y_arrow.swf" name="y_arrow" layer="10" x="1372" y="152" required="false"  />
+		<Asset file="g_arrow_01.swf" name="g_arrow" layer="10" x="1618" y="240" required="false"  />
+		<Asset file="tv_01.swf" name="tv" layer="10" x="1503" y="206" required="false"  />
+		<Asset file="control_01.swf" name="control" layer="10" x="1632" y="201" required="false"  />
+		<Asset file="blu_light_01.swf" name="blu_light" layer="10" x="1576" y="208" required="false"  />
+
+		<!-- binaries -->
+		<Asset file="electricavenue.swf" scale="1.0" name="piano" type="app" layer="20" coords="screen" x="0" y="0" applicationParentDomain="loader" />
+		<Asset file="/i/world/shared/bin/store_select.swf" scale="0.7" name="blue_cow_ui" type="app" applicationParentDomain="" layer="30" coords="screen" x="-1155" y="300" visible="false" />
+	</Assets>
+
+	<!-- polygon shapes can be used to supplement the graphical assets-->
+	<Shapes>
+		<Shape name="vinyl_interior" coords="screen" fill="none" color1="0x00ff00" layer="4" cursor="door">
+			<Vertex x="480" y="300" />
+			<Vertex x="600" y="300" />
+			<Vertex x="600" y="430" />
+			<Vertex x="480" y="430" />
+		</Shape>
+		<Shape name="garage_interior" coords="screen" fill="none" color1="0x00ff00" layer="16" cursor="door">
+			<Vertex x="920" y="225" />
+			<Vertex x="1140" y="220" />
+			<Vertex x="1140" y="385" />
+			<Vertex x="920" y="390" />
+		</Shape>
+		<Shape name="bluecow_interior" coords="screen" fill="none" color1="0x00ff00" layer="2" >
+			<Vertex x="-1100" y="240" />
+			<Vertex x="-1300" y="240" />
+			<Vertex x="-1300" y="420" />
+			<Vertex x="-1100" y="420" />
+		</Shape>
+		<Shape name="boardwalk" coords="screen" fill="none" color1="0x00ff00" layer="20" cursor="door">
+			<Vertex x="1900" y="430" />
+			<Vertex x="2000" y="430" />
+			<Vertex x="2000" y="540" />
+			<Vertex x="1900" y="540" />
+		</Shape>
+		<Shape name="skin_deep_interior" coords="screen" fill="none" color1="0x00ff00" layer="16">
+			<Vertex x="-350" y="220" />
+			<Vertex x="-200" y="220" />
+			<Vertex x="-200" y="415" />
+			<Vertex x="-350" y="415" />
+		</Shape>
+		<Shape name="pool" coords="screen" fill="none" color1="0x00ff00" layer="17" cursor="door" >
+			<Vertex x="-670" y="266" />
+			<Vertex x="-570" y="266" />
+			<Vertex x="-570" y="390" />
+			<Vertex x="-670" y="390" />
+		</Shape>
+		<Shape name="news" coords="screen" fill="none" color1="0x00ff00" layer="20" cursor="hand" >
+			<Vertex x="1200" y="200" />
+			<Vertex x="1260" y="200" />
+			<Vertex x="1260" y="320" />
+			<Vertex x="1200" y="320" />
+		</Shape>
+		<Shape name="seat1" coords="screen" fill="none" color1="0x00ff00" layer="17" cursor="chair" >
+			<Vertex x="13" y="290" />
+			<Vertex x="73" y="290" />
+			<Vertex x="73" y="340" />
+			<Vertex x="13" y="340" />
+		</Shape>
+		<Shape name="seat2" coords="screen" fill="none" color1="0x00ff00" layer="17" cursor="chair" >
+			<Vertex x="73" y="290" />
+			<Vertex x="133" y="290" />
+			<Vertex x="133" y="340" />
+			<Vertex x="73" y="340" />
+		</Shape>
+		<!--<Shape name="atm" coords="screen" fill="none" color1="0x00ff00" layer="17" cursor="phone" >
+			<Vertex x="-890" y="300" />
+			<Vertex x="-790" y="300" />
+			<Vertex x="-790" y="450" />
+			<Vertex x="-890" y="450" />
+		</Shape>-->
+		<Shape name="crew" coords="screen" fill="none" color1="0x00ff00" layer="17" cursor="door" >
+			<Vertex x="1485" y="260" />
+			<Vertex x="1700" y="260" />
+			<Vertex x="1700" y="360" />
+			<Vertex x="1485" y="360" />
+		</Shape>
+		<Shape name="crew_anim" coords="screen" fill="none" color1="0x00ff00" layer="10" >
+			<Vertex x="1500" y="350" />
+			<Vertex x="1700" y="350" />
+			<Vertex x="1700" y="600" />
+			<Vertex x="1500" y="600" />
+		</Shape>
+		<!--
+		<Shape name="marketplace" coords="screen" fill="none" color1="0x00ff00" layer="17" cursor="hand" >
+			<Vertex x="1305" y="135" />
+			<Vertex x="1410" y="135" />
+			<Vertex x="1410" y="300" />
+			<Vertex x="1305" y="300" />
+		</Shape>
+		-->
+	</Shapes>
+
+	<!-- Layout defines the "walkable" area of the room, which is a closed polygon defined by a
+	list of vertices.  gridsquare is the size of grid squares used to partition the
+	room for path finding. ideally the perimeter dimensions should be multiples of the
+	grid square size. -->
+	<Layout type="3D" gridsquare="200" max_mouseclick_distance="60">
+		<Perimeter >
+			<Vertex x="-7400" y="3350" z="0" />
+			<Vertex x="+8000" y="3350" z="0" />
+			<Vertex x="+8000" y="1750" z="0" />
+			<Vertex x="-7400" y="1750" z="0" />
+		</Perimeter>
+
+		<!-- unless other specified, we assume all area within the permimeter is walkable -->
+		<!-- a list of no-walk zones is specified here. furniture, etc require an entry in
+		     this list to prevent people from walking through it -->
+
+<Nowalk>
+<Zone x="-7400" y="1750" width="2000" height="200"/>
+<Zone x="7800" y="1750" width="200" height="200"/>
+<Zone x="-7400" y="1950" width="400" height="200"/>
+<Zone x="-7200" y="2350" width="600" height="200"/>
+<Zone x="-6200" y="2350" width="400" height="200"/>
+<Zone x="2200" y="2350" width="400" height="200"/>
+<Zone x="-7400" y="2550" width="1800" height="200"/>
+<Zone x="-5000" y="2550" width="1800" height="200"/>
+<Zone x="-400" y="2550" width="200" height="200"/>
+<Zone x="6800" y="2550" width="400" height="200"/>
+<Zone x="-7400" y="2750" width="4200" height="200"/>
+<Zone x="-2400" y="2750" width="2200" height="200"/>
+<Zone x="1600" y="2750" width="2400" height="200"/>
+<Zone x="7600" y="2750" width="400" height="200"/>
+<Zone x="-7400" y="2950" width="4200" height="200"/>
+<Zone x="-2600" y="2950" width="2400" height="200"/>
+<Zone x="1600" y="2950" width="2800" height="200"/>
+<Zone x="5800" y="2950" width="400" height="200"/>
+<Zone x="7800" y="2950" width="200" height="200"/>
+<Zone x="-7400" y="3150" width="7200" height="200"/>
+<Zone x="1600" y="3150" width="4200" height="200"/>
+<Zone x="7000" y="3150" width="1000" height="200"/>
+</Nowalk>
+<Nostand>
+<Zone x="7000" y="2150" width="600" height="200"/>
+<Zone x="7200" y="2350" width="600" height="200"/>
+<Zone x="7400" y="2550" width="600" height="200"/>
+</Nostand>
+
+	</Layout>
+
+	<Sounds>
+		<Sound name="key1" file="audio/key1_f.mp3" type="effect" preload="true"/>
+		<Sound name="key2" file="audio/key2_f_sharp.mp3" type="effect" preload="true"/>
+		<Sound name="key3" file="audio/key3_g.mp3" type="effect" preload="true"/>
+		<Sound name="key4" file="audio/key4_g_sharp.mp3" type="effect" preload="true"/>
+		<Sound name="key5" file="audio/key5_a.mp3" type="effect" preload="true"/>
+		<Sound name="key6" file="audio/key6_a_sharp.mp3" type="effect" preload="true"/>
+		<Sound name="key7" file="audio/key7_b.mp3" type="effect" preload="true"/>
+		<Sound name="key8" file="audio/key8_c.mp3" type="effect" preload="true"/>
+		<Sound name="key9" file="audio/key9_c_sharp.mp3" type="effect" preload="true"/>
+		<Sound name="key10" file="audio/key10_d.mp3" type="effect" preload="true"/>
+		<Sound name="key11" file="audio/key11_d_sharp.mp3" type="effect" preload="true"/>
+		<Sound name="key12" file="audio/key12_e.mp3" type="effect" preload="true"/>
+		<Sound name="doorclosing" file="/shared/audio/doorclosing.mp3" type="effect" />
+		<Sound name="skindeep" file="audio/skindeep.mp3" type="effect" />
+
+		<!-- volume is low so the piano keys can be heard -->
+		<Sound name="radio" type="OWPop">
+			<transform x="-8000" volume="100" panning="0"/>
+			<transform x="660" volume="5" panning="0"/>
+			<transform x="+8000" volume="100" panning="0"/>
+		</Sound>
+
+	</Sounds>
+
+	<Actions>
+
+		<!-- skin deep sign animation and sound effect when mouse over skin deep door -->
+		<Action name="skin_deep_sign_anim" target="skin_deep_door" trigger="over" >
+			<step action="playOnceForward" target="skin_deep_sign" delay="0"/>
+			<step action="playSound" target="skindeep" delay="0"/>
+		</Action>
+
+		<!--commenting out the diner signs so theres not an error during BENTO-->
+
+		<Action name="diner_sign_anim" target="vinyl_door" trigger="over" >
+			<step action="play" target="diner_sign" delay="0"/>
+			<step action="stop" target="diner_sign" delay="4000"/>
+		</Action>
+
+		<Action name="sparks" target="diner_sign2" trigger="periodic" interval="15000" >
+			<step action="play" target="diner_sign2" delay="0"/>
+			<step action="stop" target="diner_sign2" delay="2000"/>
+		</Action>
+
+		<Action name="bluecow_sign_anim" target="cow_door" trigger="over" >
+			<step action="playOnceForward" target="blue_cow_sign" delay="0"/>
+			<step action="playOnceForward" target="lantern" delay="1000"/>
+			<step action="playOnceForward" target="lantern2" delay="2000"/>
+		</Action>
+
+		<Action name="garage_ext_anim" target="garage_interior" trigger="over">
+			<step action="playOnceForward" target="electric_box" delay="1000"/>
+		</Action>
+
+		<Action name="vinyl_door_action" target="vinyl_door" trigger="click" >
+			<step name="walktodoor" action="walkto" target="2750,2400,0" delay="0" />
+			<step name="finishwalk" action="wait" target="walktodoor" delay="1000"/>
+			<step name="walkthrudoor" action="walkto" target="2400,3000,0" delay="1100" />
+			<step name="canceloff" action="setCancel" target="false" delay="1100" />
+			<step name="disappear" action="hide" target="me" delay="2800"/>
+			<step name="vinyl" action="gotoRoom" target="districts/electric_avenue/vinyl" delay="4000"/>
+		</Action>
+		<Action name="vinyl_door_anim" target="vinyl_interior" trigger="destination" >
+			<step name="canceloff" action="setCancel" target="false" delay="0" />
+			<step name="opendoor"  action="playOnceForward" target="vinyl_door" delay="0" />
+			<step name="closedoor" action="playOnceReverse" target="vinyl_door" delay="1000"/>
+			<step name="sound" action="playSound" target="doorclosing" delay="1000"/>
+		</Action>
+		<Action name="garage_door_action" target="garage_interior" trigger="click">
+			<step name="walktodoor" action="walkto" target="4600,2600,0" delay="0" />
+			<step name="finishwalk" action="wait" target="walktodoor" delay="1000"/>
+			<step name="walkthrudoor" action="walkto" target="5000,3400,0" delay="1100" />
+			<step name="canceloff" action="setCancel" target="false" delay="1100" />
+			<step name="disappear" action="hide" target="me" delay="2600"/>
+			<step name="vinyl" action="gotoRoom" target="districts/electric_avenue/garage" delay="3600"/>
+		</Action>
+		<Action name="garage_door_anim" target="garage_interior" trigger="destination">
+			<step name="canceloff" action="setCancel" target="false" delay="0" />
+			<step name="opendoor"  action="playOnceForward" target="garage_door" delay="0" />
+			<step name="closedoor" action="playOnceReverse" target="garage_door" delay="1300"/>
+			<step name="sound" action="playSound" target="doorclosing" delay="500"/>
+		</Action>
+		<Action name="bluecow_door_action" target="cow_door" trigger="click">
+			<step name="walktodoor" action="walkto" target="-4700,2400,0" delay="0" />
+			<step name="show_ui" action="show" target="blue_cow_ui" delay="200" />
+			<!-- test event to make sure event actions are working -->
+			<!--
+			<step name="test" action="event" target="TEST" delay="200" />
+			-->
+		</Action>
+		<Action name="bluecow_door_close" target="room" trigger="click">
+			<step action="hide" target="blue_cow_ui" delay="0" />
+		</Action>
+		<Action name="bluecow_door_click1" target="blue_cow_ui.button_Clothing" trigger="click">
+			<step name="canceloff" action="setCancel" target="false" delay="0" />
+			<step name="hide_ui" action="hide" target="blue_cow_ui" delay="0" />
+			<step name="walkthrudoor" action="walkto" target="-5900,3200,0" delay="200" />
+			<step name="disappear" action="hide" target="me" delay="1500"/>
+			<step name="bluecow" action="gotoRoom" target="districts/electric_avenue/bluecow_clothing" delay="3000"/>
+		</Action>
+		<Action name="bluecow_door_click2" target="blue_cow_ui.button_Furniture" trigger="click">
+			<step name="canceloff" action="setCancel" target="false" delay="0" />
+			<step name="hide_ui" action="hide" target="blue_cow_ui" delay="0" />
+			<step name="walkthrudoor" action="walkto" target="-5900,3200,0" delay="200" />
+			<step name="disappear" action="hide" target="me" delay="1500"/>
+			<step name="bluecow" action="gotoRoom" target="districts/electric_avenue/bluecow_furniture" delay="3000"/>
+		</Action>
+		<Action name="bluecow_door_anim" target="bluecow_interior" trigger="destination">
+			<step name="canceloff" action="setCancel" target="false" delay="0" />
+			<step name="opendoor"  action="playOnceForward" target="cow_door" delay="0" />
+			<step name="closedoor" action="playOnceReverse" target="cow_door" delay="1200"/>
+			<step name="sound" action="playSound" target="doorclosing" delay="1000"/>
+		</Action>
+		<Action name="boardwalk_bridge" target="boardwalk" trigger="click">
+			<step name="walktodoor" action="walkto" target="8400,2200,0" delay="0" />
+			<step name="finishwalk" action="wait" target="walktodoor" delay="1000"/>
+			<step name="boardwalk" action="gotoRoom" target="arcadia-boardwalk-exterior" delay="1500"/>
+		</Action>
+		<Action name="star_door_click" target="star_door" trigger="click">
+			<step name="walktodoor" action="walkto" target="-7800,2560,0" delay="0" />
+			<step name="finishwalk" action="wait" target="walktodoor" delay="1000"/>
+			<step name="wonderland" action="gotoRoom" target="districts/wonderland/exterior" delay="1500"/>
+		</Action>
+		<Action name="skindeep_door_action" target="skin_deep_door" trigger="click">
+			<step name="walktodoor" action="walkto" target="-1200,2400,0" delay="0" />
+			<step name="finishwalk" action="wait" target="walktodoor" delay="1000"/>
+			<step name="walkthrudoor" action="walkto" target="-1200,3000,0" delay="1100" />
+			<step name="canceloff" action="setCancel" target="false" delay="1100" />
+			<step name="disappear" action="hide" target="me" delay="2500"/>
+			<step name="vinyl" action="gotoRoom" target="districts/electric_avenue/skin_deep" delay="4000"/>
+		</Action>
+		<Action name="skindeep_door_anim" target="skin_deep_interior" trigger="destination">
+			<step name="canceloff" action="setCancel" target="false" delay="0" />
+			<step name="opendoor"  action="playOnceForward" target="skin_deep_door" delay="0" />
+			<step name="closedoor" action="playOnceReverse" target="skin_deep_door" delay="1000"/>
+			<step name="sound" action="playSound" target="doorclosing" delay="1000"/>
+		</Action>
+
+		<Action name="rnr_anim1" target="rnr" trigger="time">
+			<step action="play" target="rnr" delay="5000"/>
+		</Action>
+
+		<Action name="rnr_anim2" target="pool" trigger="over">
+			<step action="playOnceForward" target="rnr8ball" />
+		</Action>
+
+		<Action name="pool_menu" target="pool" trigger="click">
+			<step action="event" target="pool_menu" delay="0" />
+		</Action>
+		<Action name="news_anim" target="news" trigger="over">
+			<step action="playOnceForward" target="news2" />
+		</Action>
+		<Action name="news" target="news" trigger="click">
+			<step action="link" target="dialog/whatsnew" />
+		</Action>
+		<Action name="sit1" target="seat1" trigger="click">
+			<step action="slot" target="0" />
+		</Action>
+		<Action name="sit2" target="seat2" trigger="click">
+			<step action="slot" target="1" />
+		</Action>
+		<!--<Action name="atm" target="atm" trigger="click">
+			<step action="atm" target="atm" />
+		</Action>-->
+		<!--<Action name="atm_anim" target="atm" trigger="over">
+			<step action="show" target="gem_atm" />
+			<step action="playOnceForward" target="gem_atm" />
+			<step action="hide" target="gem_atm" delay="8000" />
+		</Action>-->
+		<Action name="crew" target="crew" trigger="click">
+			<step action="gotoRoom" target="districts/electric_avenue/crew" />
+		</Action>
+		<!--
+		<Action name="marketplace" target="marketplace" trigger="click">
+			<step action="link" target="shop/marketplace" delay="0"/>
+		</Action>
+		-->
+		<Action name="crew_anim" target="crew_anim" trigger="over">
+			<step action="play" target="wings" />
+			<step action="play" target="r_ring" />
+			<step action="play" target="y_arrow" />
+			<step action="play" target="g_arrow" />
+			<step action="play" target="tv" />
+			<step action="play" target="control" />
+			<step action="play" target="blu_light" />
+			<step action="stop" target="wings" delay="5000"/>
+			<step action="stop" target="r_ring" delay="5000"/>
+			<step action="stop" target="y_arrow" delay="5000"/>
+			<step action="stop" target="g_arrow" delay="5000"/>
+			<step action="stop" target="tv" delay="5000"/>
+			<step action="stop" target="control" delay="5000"/>
+			<step action="stop" target="blu_light" delay="5000"/>
+		</Action>
+
+	</Actions>
+
+
+	<CharacterAnimations>
+		<Animation name="piano_001" female_url="i/avatars/animation/female/piano_001" male_url="i/avatars/animation/male/piano_001" />
+	</CharacterAnimations>
+
+	<!-- Slots are places that only one person can occupy at a time, e.g. a chair.  Slots are referenced based on order in this list. -->
+	<Slots>
+		<Slot type="seat" x="160" y="3350" z="0" angle="-35" />
+		<Slot type="seat" x="320" y="3300" z="0" angle="-35" />
+	</Slots>
+
+	<!-- NPCs are characters generated and controlled by the server -->
+	<NPCs>
+	</NPCs>
+
+	<!-- Positions are locations that are referenced by NPCs.  Allows us to move an NPC in world w/o rebuilding quests -->
+	<Positions>
+		<Position x="-225" y="2500" z="0"/>
+		<Position x="6560" y="3200" z="0"/>
+	</Positions>
+
+	<DanceOff enabled="true" />
+
+	<Throwing enabled="true" />
+
+	<!-- location where a golden key may be placed -->
+	<GoldenKey enabled="true" >
+		<Location x="1455" y="3200" z="0" />
+		<Location x="-5800" y="1800" z="0" />
+		<Location x="5500" y="3000" z="0" />
+	</GoldenKey>
+</Room>
