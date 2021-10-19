@@ -1,0 +1,225 @@
+
+<Room name="nevermore" >
+
+	<!-- location of person upon initial entry to room -->
+	<!-- a random location is chosen within the rectangle by width and height -->
+	<Person x="-700" y="1000" z="0" width="800" height="200" from="default"/>
+	<Person x="2200" y="1000" z="0" width="200" height="200" from="districts/wonderland/exterior"/>
+
+	<!-- how fast person walks in this room -->
+	<Walk speed="8000" framerate="40"/>
+
+	<!-- camera settings -->
+  <Camera x="1100" y="-4800" z="2050" focalX="0" focalY="-60" focalLength="1600"/>
+
+	<!-- scroll settings -->
+	<scroll minspeed="200" maxspeed="250" thresholdX="200"/>
+
+	<Assets>
+		<Asset file="backdrop.jpg" scale="1.0" name="back" layer="1" coords="screen" x="-1200" y="0" />
+  		<Asset file="mask_foreground.swf" name="fore" layer="51" x="-1200" y="0" blendmode="erase" />
+ 	 	<Asset file="cage_front.png" scale="1.0" name="cage_front" layer="50" coords="screen" x="-1047" y="203" depth="2000"/>
+
+		<Asset file="nevermore.swf" name="outletshop" type="app" layer="52" x="-200" y="0"/>
+		<Asset file="/i/world/shared/bin/store_select.swf" scale="0.8" name="store_ui" type="app" layer="51" coords="screen" x="-220" y="200" visible="false"/>
+
+		<Asset file="crow_cage_003.swf" name="crow_cage" layer="10" x="-1103" y="182" stopframe="0" required="false"/>
+	 	<Asset file="coffin_door.swf" scale="1" name="coffin_door" layer="50" coords="screen" x="508" y="235" depth="1200" required="false"/>
+		<Asset file="sale_items_03.swf" name="sale_items" layer="10" x="-1042" y="65" required="false"/>
+		<Asset file="bridge_003.swf" name="bridge" layer="50" x="-371" y="166" depth="3000" required="false"/>
+		<Asset file="house_02.swf" name="house" layer="10" x="-95" y="28" required="false"/>
+		<Asset file="coffin_door_01.swf" name="coffin_anim" layer="50" x="650" y="300" depth="1199" required="false" scale="1"/>
+		<Asset file="midnight_cafe_01.swf" name="sign_anim" layer="10" x="-525" y="127" reqired="false" stopframe="0" />
+		<Asset file="billboard_05_final.swf" name="billboard" layer="10" x="161" y="186" required="false" />
+
+	</Assets>
+
+	<!-- polygon shapes can be used to supplement the graphical assets-->
+	<Shapes>
+		<Shape name="buffet_entrance" coords="screen" fill="none" color1="0x00ff00" layer="10" cursor="door">
+			<Vertex x="-670" y="100" />
+			<Vertex x="-560" y="100" />
+			<Vertex x="-560" y="220" />
+			<Vertex x="-670" y="220" />
+  		</Shape>	
+		<Shape name="store_entrance" coords="screen" fill="none" color1="0x00ff00" layer="10" cursor="door">
+			<Vertex x="-195" y="120" />
+			<Vertex x="100" y="120" />
+			<Vertex x="100" y="250" />
+			<Vertex x="-195" y="250" />
+  		</Shape>	
+		<Shape name="coffin_entrance" coords="screen" fill="none" color1="0x00ff00" layer="10" cursor="door">
+			<Vertex x="660" y="300" />
+			<Vertex x="745" y="300" />
+			<Vertex x="745" y="440" />
+			<Vertex x="660" y="440" />
+  		</Shape>	
+		<Shape name="outlet_store" coords="screen" fill="none" color1="0x00ff00" layer="10" cursor="hand">
+			<Vertex x="-1040" y="250" />
+			<Vertex x="-960" y="230" />
+			<Vertex x="-915" y="410" />
+			<Vertex x="-995" y="430" />
+  		</Shape>	
+		<Shape name="dungeon_entrance" coords="screen" fill="none" color1="0x00ff00" layer="10" cursor="door">
+			<Vertex x="300" y="240" />
+			<Vertex x="430" y="240" />
+			<Vertex x="430" y="400" />
+			<Vertex x="300" y="400" />
+  		</Shape>	
+	</Shapes>
+
+	<!-- Layout defines the "walkable" area of the room, which is a closed polygon defined by a 
+	list of vertices.  gridsquare is the size of grid squares used to partition the 
+	room for path finding. ideally the perimeter dimensions should be multiples of the 
+	grid square size. -->
+<Layout gridsquare="200" >
+    <Perimeter coords="world">
+      <Vertex x="-2800" y="3800" z="0"/>
+      <Vertex x="3200" y="3800" z="0"/>
+      <Vertex x="3200" y="400" z="0"/>
+      <Vertex x="-2800" y="400" z="0"/>
+    </Perimeter>
+    <Nowalk>
+      <Zone x="-2800" y="400" width="1800" height="200"/>
+      <Zone x="-200" y="400" width="3000" height="200"/>
+      <Zone x="-2800" y="600" width="1000" height="200"/>
+      <Zone x="0" y="600" width="2800" height="200"/>
+      <Zone x="-2800" y="800" width="800" height="200"/>
+      <Zone x="600" y="800" width="1600" height="200"/>
+      <Zone x="2600" y="800" width="600" height="200"/>
+      <Zone x="-2800" y="1000" width="600" height="200"/>
+      <Zone x="400" y="1200" width="600" height="200"/>
+      <Zone x="0" y="1400" width="2200" height="200"/>
+      <Zone x="2600" y="1400" width="600" height="200"/>
+      <Zone x="-1600" y="1600" width="400" height="200"/>
+      <Zone x="0" y="1600" width="2800" height="200"/>
+      <Zone x="-1600" y="1800" width="600" height="200"/>
+      <Zone x="-800" y="1800" width="200" height="200"/>
+      <Zone x="0" y="1800" width="2800" height="200"/>
+      <Zone x="-2800" y="2000" width="600" height="200"/>
+      <Zone x="-1600" y="2000" width="1200" height="200"/>
+      <Zone x="0" y="2000" width="2800" height="200"/>
+      <Zone x="-2800" y="2200" width="600" height="200"/>
+      <Zone x="-1600" y="2200" width="1200" height="200"/>
+      <Zone x="0" y="2200" width="2800" height="200"/>
+      <Zone x="-2800" y="2400" width="600" height="200"/>
+      <Zone x="-1800" y="2400" width="1400" height="200"/>
+      <Zone x="0" y="2400" width="2800" height="200"/>
+      <Zone x="-2800" y="2600" width="600" height="200"/>
+      <Zone x="-1800" y="2600" width="1600" height="200"/>
+      <Zone x="0" y="2600" width="2800" height="200"/>
+      <Zone x="-2800" y="2800" width="600" height="200"/>
+      <Zone x="-1800" y="2800" width="1600" height="200"/>
+      <Zone x="0" y="2800" width="2800" height="200"/>
+      <Zone x="-2800" y="3000" width="400" height="200"/>
+      <Zone x="-2000" y="3000" width="1800" height="200"/>
+      <Zone x="0" y="3000" width="2800" height="200"/>
+      <Zone x="-2800" y="3200" width="400" height="200"/>
+      <Zone x="-2000" y="3200" width="1800" height="200"/>
+      <Zone x="0" y="3200" width="2800" height="200"/>
+      <Zone x="-2800" y="3400" width="200" height="200"/>
+      <Zone x="-2000" y="3400" width="1800" height="200"/>
+      <Zone x="0" y="3400" width="2800" height="200"/>
+      <Zone x="-2800" y="3600" width="200" height="200"/>
+      <Zone x="-2200" y="3600" width="2000" height="200"/>
+      <Zone x="0" y="3600" width="2800" height="200"/>
+    </Nowalk>
+<Nostand>
+</Nostand>
+
+</Layout>
+	
+<Sounds>
+	<Sound name="radio" type="OWPop" />
+</Sounds>
+
+<Actions>
+  <Action name="buffet" target="buffet_entrance" trigger="click">
+	<step name="walk" action="walkto" target="-2400,3799,0"/>
+	<step action="wait" target="walk" delay="500" />
+    <step action="gotoRoom" target="districts/nevermore/midnight_buffet" delay="501"/>
+  </Action>
+  <Action name="coffin" target="coffin_entrance" trigger="click">
+    <step name="walk" action="walkto" target="3530,1090,0"/>
+    <step action="wait" target="walk" delay="500"/>
+    <step action="playOnceForward" target="coffin_door" delay="600"/>
+    <step action="gotoRoom" target="districts/wonderland/exterior" delay="1000"/>
+  </Action>
+  <Action name="coffin_anim" target="coffin_door" trigger="none">
+    <step action="playOnceForward" target="coffin_door"/>
+    <step action="playOnceReverse" target="coffin_door" delay="1000"/>
+  </Action>
+  <Action name="store" target="store_entrance" trigger="click">
+	<step name="walk" action="walkto" target="-200,2300,0"/>
+    <step action="show" target="store_ui" delay="200"/>
+  </Action>
+  <Action name="store_door_click1" target="store_ui.button_Clothing" trigger="click">
+    <step action="gotoRoom" target="districts/nevermore/skeletonkey_clothing" delay="1200"/>
+  </Action>
+  <Action name="store_door_click2" target="store_ui.button_Furniture" trigger="click">
+    <step action="gotoRoom" target="districts/nevermore/skeletonkey_furniture" delay="1200"/>
+  </Action>
+  <Action name="store_door_close" target="room" trigger="click">
+    <step action="hide" target="store_ui" delay="0"/>
+  </Action>
+  <Action name="outlet" target="outlet_store" trigger="click">
+    <step action="event" target="outlet" delay="0"/>
+  </Action>
+  <Action name="bridge" target="" trigger="periodic" interval="22000" >
+	<step action="playOnceForward" target="bridge" delay="0" />
+  </Action>
+  <Action name="house" target="store_entrance" trigger="over"  >
+	<step action="play" target="house,1" delay="0" />
+	<step action="stop" target="house" delay="3000"/>
+	<step action="hide" target="house" delay="3000" />
+  </Action>
+  <Action name="sale" target="" trigger="periodic" interval="10000" >
+	<step action="play" target="sale_items,1" />
+	<step action="stop" target="sale_items" delay="3000"/>
+	<step action="hide" target="sale_items" delay="3000" />
+  </Action>
+  <Action name="coffin_anim" target="coffin_entrance" trigger="over">
+    <step action="playOnceForward" target="coffin_anim"/>
+  </Action>
+  <Action name="dungeon" target="dungeon_entrance" trigger="click">
+	  <step action="gotoRoom" target="districts/nevermore/goldenkey_dungeon"/>
+  </Action>
+  <Action name="billboard_start" target="billboard" trigger="time" >
+    <step action="playOnceForward" target="billboard" delay="6000" />
+  </Action>
+  <Action name="billboard_over" target="billboard" trigger="over" >
+    <step action="playOnceForward" target="billboard"/>
+  </Action>
+
+  </Actions>
+
+  <Slots>
+</Slots>
+
+<NPCs>
+</NPCs>
+
+<Outlet url="games/info/outletshop.swf"/>
+
+<Throwing enabled="true" />
+<DanceOff enabled="true" />
+
+<Positions>
+	<Position x="2300" y="1500" z="0" />
+</Positions>
+
+<!-- location where a golden key may be placed -->
+<GoldenKey enabled="true" >
+	<Location x="-3400" y="1500" z="0" />
+	<Location x="-3400" y="6000" z="0" />
+</GoldenKey>
+
+<!-- bob the crow -->
+<Helpers npc="96019" >
+	<Help page="1" text="nevermore.npc.help1" image="goldenkey.swf" />
+	<Help page="2" text="nevermore.npc.help2" image="goldenkey.swf" />
+	<Help page="3" text="nevermore.npc.help3" image="goldenkey.swf" />
+</Helpers>
+
+</Room>
+	
