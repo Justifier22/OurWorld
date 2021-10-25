@@ -1,5 +1,5 @@
 <settings>
-<server host='nohost' gameserver='nohost' jspserver='nohost' error='No available server.  Please try again in a minute.' port='0' port2='0' trace='false' />
+<server host='game3.ourworld.com"t' gameserver='game3.ourworld.com"' jspserver='game3.ourworld.com"' error='No available server.  Please try again in a minute.' port='9310' port2='9310' trace='false' />
 <future enabled='false'/>
 </settings>
 
